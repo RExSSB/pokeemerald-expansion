@@ -91,7 +91,17 @@
     F(SWAGGER) \
     F(SLEEP_TALK) \
     F(U_TURN) \
-    F(SUBSTITUTE)
+    F(SUBSTITUTE) \
+    F(FLASH_CANNON) \
+    F(DRAGON_PULSE) \
+    F(MAGICAL_LEAF) \
+    F(SMACK_DOWN) \
+    F(SNARL) \
+    F(LEECH_LIFE) \
+    F(TRICK_ROOM) \
+    F(DARK_PULSE) \
+    F(NATURE_POWER) \
+    F(DAZZLING_GLEAM)
 
 #define FOREACH_HM(F) \
     F(CUT) \
