@@ -71,7 +71,17 @@
     F(GIGA_IMPACT) \
     F(STONE_EDGE) \
     F(AIR_SLASH) \
-    F(GRASS_KNOT)
+    F(GRASS_KNOT) \
+    F(HONE_CLAWS) \
+    F(STEALTH_ROCK) \
+    F(VOLT_SWITCH) \
+    F(THUNDER_WAVE) \
+    F(GYRO_BALL) \
+    F(SWORDS_DANCE) \
+    F(PSYCH_UP) \
+    F(BULLDOZE) \
+    F(FROST_BREATH) \
+    F(ROCK_SLIDE)
 
 #define FOREACH_HM(F) \
     F(CUT) \
