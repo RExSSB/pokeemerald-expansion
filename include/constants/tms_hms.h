@@ -56,7 +56,12 @@
     F(FOCUS_BLAST) \
     F(ENERGY_BALL) \
     F(FALSE_SWIPE) \
-    F(SCALD)
+    F(SCALD) \
+    F(CHARGE_BEAM) \
+    F(ACROBATICS) \
+    F(VENOSHOCK) \
+    F(ROUND) \
+    F(AURORA_VEIL)
 
 #define FOREACH_HM(F) \
     F(CUT) \
