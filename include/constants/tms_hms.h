@@ -52,7 +52,11 @@
     F(SKILL_SWAP) \
     F(SNATCH) \
     F(OVERHEAT) \
-    F(DAZZLING_GLEAM)
+    F(PSYSHOCK) \
+    F(FOCUS_BLAST) \
+    F(ENERGY_BALL) \
+    F(FALSE_SWIPE) \
+    F(SCALD)
 
 #define FOREACH_HM(F) \
     F(CUT) \
