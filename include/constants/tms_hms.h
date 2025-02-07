@@ -81,7 +81,17 @@
     F(PSYCH_UP) \
     F(BULLDOZE) \
     F(FROST_BREATH) \
-    F(ROCK_SLIDE)
+    F(ROCK_SLIDE) \
+    F(X_SCISSOR) \
+    F(DRAGON_TAIL) \
+    F(ROOST) \
+    F(POISON_JAB) \
+    F(DREAM_EATER) \
+    F(DRAIN_PUNCH) \
+    F(SWAGGER) \
+    F(SLEEP_TALK) \
+    F(U_TURN) \
+    F(SUBSTITUTE)
 
 #define FOREACH_HM(F) \
     F(CUT) \
