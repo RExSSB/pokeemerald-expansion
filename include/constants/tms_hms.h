@@ -61,7 +61,17 @@
     F(ACROBATICS) \
     F(VENOSHOCK) \
     F(ROUND) \
-    F(AURORA_VEIL)
+    F(AURORA_VEIL) \
+    F(WILL_O_WISP) \
+    F(EMBARGO) \
+    F(FLAME_CHARGE) \
+    F(EXPLOSION) \
+    F(SHADOW_CLAW) \
+    F(PAYBACK) \
+    F(GIGA_IMPACT) \
+    F(STONE_EDGE) \
+    F(AIR_SLASH) \
+    F(GRASS_KNOT)
 
 #define FOREACH_HM(F) \
     F(CUT) \
