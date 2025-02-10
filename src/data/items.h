@@ -11183,7 +11183,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_PSYSHOCK,
     },
 
-    [ITEM_TM52] =
+    [ITEM_TM_FOCUS_BLAST] =
     {
         .name = _("TM52"),
         .price = 3000,
@@ -11198,7 +11198,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_FOCUS_BLAST,
     },
 
-    [ITEM_TM53] =
+    [ITEM_TM_ENERGY_BALL] =
     {
         .name = _("TM53"),
         .price = 3000,
@@ -11213,7 +11213,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_ENERGY_BALL,
     },
 
-    [ITEM_TM54] =
+    [ITEM_TM_FALSE_SWIPE] =
     {
         .name = _("TM54"),
         .price = 3000,
@@ -11228,7 +11228,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_FALSE_SWIPE,
     },
 
-    [ITEM_TM55] =
+    [ITEM_TM_SCALD] =
     {
         .name = _("TM55"),
         .price = 3000,
@@ -11243,7 +11243,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_SCALD,
     },
 
-    [ITEM_TM56] =
+    [ITEM_TM_CHARGE_BEAM] =
     {
         .name = _("TM56"),
         .price = 3000,
@@ -11258,7 +11258,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_CHARGE_BEAM,
     },
 
-    [ITEM_TM57] =
+    [ITEM_TM_ACROBATICS] =
     {
         .name = _("TM57"),
         .price = 3000,
@@ -11273,7 +11273,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_ACROBATICS,
     },
 
-    [ITEM_TM58] =
+    [ITEM_TM_VENOSHOCK] =
     {
         .name = _("TM58"),
         .price = 3000,
@@ -11288,7 +11288,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_VENOSHOCK,
     },
 
-    [ITEM_TM59] =
+    [ITEM_TM_ROUND] =
     {
         .name = _("TM59"),
         .price = 3000,
@@ -11303,7 +11303,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_ROUND,
     },
 
-    [ITEM_TM60] =
+    [ITEM_TM_AURORA_VEIL] =
     {
         .name = _("TM60"),
         .price = 3000,
@@ -11318,7 +11318,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_AURORA_VEIL,
     },
 
-    [ITEM_TM61] =
+    [ITEM_TM_WILL_O_WISP] =
     {
         .name = _("TM61"),
         .price = 3000,
@@ -11333,7 +11333,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_WILL_O_WISP,
     },
 
-    [ITEM_TM62] =
+    [ITEM_TM_EMBARGO] =
     {
         .name = _("TM62"),
         .price = 3000,
@@ -11348,7 +11348,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_EMBARGO,
     },
 
-    [ITEM_TM63] =
+    [ITEM_TM_FLAME_CHARGE] =
     {
         .name = _("TM63"),
         .price = 3000,
@@ -11363,7 +11363,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_FLAME_CHARGE,
     },
 
-    [ITEM_TM64] =
+    [ITEM_TM_EXPLOSION] =
     {
         .name = _("TM64"),
         .price = 3000,
@@ -11378,7 +11378,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_EXPLOSION,
     },
 
-    [ITEM_TM65] =
+    [ITEM_TM_SHADOW_CLAW] =
     {
         .name = _("TM65"),
         .price = 3000,
@@ -11393,7 +11393,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_SHADOW_CLAW,
     },
 
-    [ITEM_TM66] =
+    [ITEM_TM_PAYBACK] =
     {
         .name = _("TM66"),
         .price = 3000,
@@ -11408,7 +11408,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_PAYBACK,
     },
 
-    [ITEM_TM67] =
+    [ITEM_TM_GIGA_IMPACT] =
     {
         .name = _("TM67"),
         .price = 3000,
@@ -11423,7 +11423,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_GIGA_IMPACT,
     },
 
-    [ITEM_TM68] =
+    [ITEM_TM_STONE_EDGE] =
     {
         .name = _("TM68"),
         .price = 3000,
@@ -11438,7 +11438,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_STONE_EDGE,
     },
 
-    [ITEM_TM69] =
+    [ITEM_TM_AIR_SLASH] =
     {
         .name = _("TM69"),
         .price = 3000,
@@ -11453,7 +11453,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_AIR_SLASH,
     },
 
-    [ITEM_TM70] =
+    [ITEM_TM_GRASS_KNOT] =
     {
         .name = _("TM70"),
         .price = 3000,
@@ -11468,7 +11468,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_GRASS_KNOT,
     },
 
-    [ITEM_TM71] =
+    [ITEM_TM_HONE_CLAWS] =
     {
         .name = _("TM71"),
         .price = 3000,
@@ -11483,7 +11483,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_HONE_CLAWS,
     },
 
-    [ITEM_TM72] =
+    [ITEM_TM_STEALTH_ROCK] =
     {
         .name = _("TM72"),
         .price = 3000,
@@ -11498,7 +11498,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_STEALTH_ROCK,
     },
 
-    [ITEM_TM73] =
+    [ITEM_TM_VOLT_SWITCH] =
     {
         .name = _("TM73"),
         .price = 3000,
@@ -11513,7 +11513,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_VOLT_SWITCH,
     },
 
-    [ITEM_TM74] =
+    [ITEM_TM_THUNDER_WAVE] =
     {
         .name = _("TM74"),
         .price = 3000,
@@ -11528,7 +11528,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_THUNDER_WAVE,
     },
 
-    [ITEM_TM75] =
+    [ITEM_TM_GYRO_BALL] =
     {
         .name = _("TM75"),
         .price = 3000,
@@ -11543,7 +11543,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_GYRO_BALL,
     },
 
-    [ITEM_TM76] =
+    [ITEM_TM_SWORDS_DANCE] =
     {
         .name = _("TM76"),
         .price = 3000,
@@ -11558,7 +11558,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_SWORDS_DANCE,
     },
 
-    [ITEM_TM77] =
+    [ITEM_TM_PSYCH_UP] =
     {
         .name = _("TM77"),
         .price = 3000,
@@ -11573,7 +11573,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_PSYCH_UP,
     },
 
-    [ITEM_TM78] =
+    [ITEM_TM_BULLDOZE] =
     {
         .name = _("TM78"),
         .price = 3000,
@@ -11588,7 +11588,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_BULLDOZE,
     },
 
-    [ITEM_TM79] =
+    [ITEM_TM_FROST_BREATH] =
     {
         .name = _("TM79"),
         .price = 3000,
@@ -11603,7 +11603,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_FROST_BREATH,
     },
 
-    [ITEM_TM80] =
+    [ITEM_TM_ROCK_SLIDE] =
     {
         .name = _("TM80"),
         .price = 3000,
@@ -11618,7 +11618,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_ROCK_SLIDE,
     },
 
-    [ITEM_TM81] =
+    [ITEM_TM_X_SCISSOR] =
     {
         .name = _("TM81"),
         .price = 3000,
@@ -11633,7 +11633,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_X_SCISSOR,
     },
 
-    [ITEM_TM82] =
+    [ITEM_TM_DRAGON_TAIL] =
     {
         .name = _("TM82"),
         .price = 3000,
@@ -11648,7 +11648,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_DRAGON_TAIL,
     },
 
-    [ITEM_TM83] =
+    [ITEM_TM_ROOST] =
     {
         .name = _("TM83"),
         .price = 3000,
@@ -11663,7 +11663,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_ROOST,
     },
 
-    [ITEM_TM84] =
+    [ITEM_TM_POISON_JAB] =
     {
         .name = _("TM84"),
         .price = 3000,
@@ -11678,7 +11678,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_POISON_JAB,
     },
 
-    [ITEM_TM85] =
+    [ITEM_TM_DREAM_EATER] =
     {
         .name = _("TM85"),
         .price = 3000,
@@ -11693,7 +11693,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_DREAM_EATER,
     },
 
-    [ITEM_TM86] =
+    [ITEM_TM_DRAIN_PUNCH] =
     {
         .name = _("TM86"),
         .price = 3000,
@@ -11708,7 +11708,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_DRAIN_PUNCH,
     },
 
-    [ITEM_TM87] =
+    [ITEM_TM_SWAGGER] =
     {
         .name = _("TM87"),
         .price = 3000,
@@ -11723,7 +11723,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_SWAGGER,
     },
 
-    [ITEM_TM88] =
+    [ITEM_TM_SLEEP_TALK] =
     {
         .name = _("TM88"),
         .price = 3000,
@@ -11738,7 +11738,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_SLEEP_TALK,
     },
 
-    [ITEM_TM89] =
+    [ITEM_TM_U_TURN] =
     {
         .name = _("TM89"),
         .price = 3000,
@@ -11753,7 +11753,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_U_TURN,
     },
 
-    [ITEM_TM90] =
+    [ITEM_TM_SUBSTITUTE] =
     {
         .name = _("TM90"),
         .price = 3000,
@@ -11768,7 +11768,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_SUBSTITUTE,
     },
 
-    [ITEM_TM91] =
+    [ITEM_TM_FLASH_CANNON] =
     {
         .name = _("TM91"),
         .price = 3000,
@@ -11783,7 +11783,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_FLASH_CANNON,
     },
 
-    [ITEM_TM92] =
+    [ITEM_TM_DRAGON_PULSE] =
     {
         .name = _("TM92"),
         .price = 3000,
@@ -11798,7 +11798,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_DRAGON_PULSE,
     },
 
-    [ITEM_TM93] =
+    [ITEM_TM_MAGICAL_LEAF] =
     {
         .name = _("TM93"),
         .price = 3000,
@@ -11813,7 +11813,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_MAGICAL_LEAF,
     },
 
-    [ITEM_TM94] =
+    [ITEM_TM_SMACK_DOWN] =
     {
         .name = _("TM94"),
         .price = 3000,
@@ -11828,7 +11828,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_SMACK_DOWN,
     },
 
-    [ITEM_TM95] =
+    [ITEM_TM_SNARL] =
     {
         .name = _("TM95"),
         .price = 3000,
@@ -11843,7 +11843,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_SNARL,
     },
 
-    [ITEM_TM96] =
+    [ITEM_TM_LEECH_LIFE] =
     {
         .name = _("TM96"),
         .price = 3000,
@@ -11858,7 +11858,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_LEECH_LIFE,
     },
 
-    [ITEM_TM97] =
+    [ITEM_TM_TRICK_ROOM] =
     {
         .name = _("TM97"),
         .price = 3000,
@@ -11873,7 +11873,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_TRICK_ROOM,
     },
 
-    [ITEM_TM98] =
+    [ITEM_TM_DARK_PULSE] =
     {
         .name = _("TM98"),
         .price = 3000,
@@ -11888,7 +11888,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_DARK_PULSE,
     },
 
-    [ITEM_TM99] =
+    [ITEM_TM_NATURE_POWER] =
     {
         .name = _("TM99"),
         .price = 3000,
@@ -11903,7 +11903,7 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_NATURE_POWER,
     },
 
-    [ITEM_TM100] =
+    [ITEM_TM_DAZZLING_GLEAM] =
     {
         .name = _("TM100"),
         .price = 3000,
