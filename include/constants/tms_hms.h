@@ -50,7 +50,7 @@
     F(THIEF) \
     F(STEEL_WING) \
     F(SKILL_SWAP) \
-    F(SNATCH) \
+    F(KNOCK_OFF) \
     F(OVERHEAT) \
     F(PSYSHOCK) \
     F(FOCUS_BLAST) \
