@@ -101,7 +101,32 @@
     F(TRICK_ROOM) \
     F(DARK_PULSE) \
     F(NATURE_POWER) \
-    F(DAZZLING_GLEAM)
+    F(DAZZLING_GLEAM) \
+    F(WILD_CHARGE) \
+    F(AVALANCHE) \
+    F(BRINE) \
+    F(PSYCHO_CUT) \
+    F(EARTH_POWER) \
+    F(AGILITY) \
+    F(SMART_STRIKE) \
+    F(POWER_GEM) \
+    F(BUG_BUZZ) \
+    F(ICICLE_SPEAR) \
+    F(PLAY_ROUGH) \
+    F(AURA_SPHERE) \
+    F(HEX) \
+    F(IRON_HEAD) \
+    F(CROSS_POISON) \
+    F(FLING) \
+    F(MYSTICAL_FIRE) \
+    F(SLUDGE_WAVE) \
+    F(NASTY_PLOT) \
+    F(POWER_UP_PUNCH) \
+    F(SOLAR_BLADE) \
+    F(ELECTRIC_TERRAIN) \
+    F(GRASSY_TERRAIN) \
+    F(PSYCHIC_TERRAIN) \
+    F(MISTY_TERRAIN)
 
 #define FOREACH_HM(F) \
     F(CUT) \
