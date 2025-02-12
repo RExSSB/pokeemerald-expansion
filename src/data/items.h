@@ -11288,19 +11288,19 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_VENOSHOCK,
     },
 
-    [ITEM_TM_ROUND] =
+    [ITEM_TM_HYPER_VOICE] =
     {
         .name = _("TM59"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "A song that\n"
-            "inflicts damage.\n"
-            "Others can join in."),
+            "A loud attack\n"
+            "that uses sound\n"
+            "waves to injure."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_ROUND,
+        .secondaryId = MOVE_HYPER_VOICE,
     },
 
     [ITEM_TM_AURORA_VEIL] =

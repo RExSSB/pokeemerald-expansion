@@ -60,7 +60,7 @@
     F(CHARGE_BEAM) \
     F(ACROBATICS) \
     F(VENOSHOCK) \
-    F(ROUND) \
+    F(HYPER_VOICE) \
     F(AURORA_VEIL) \
     F(WILL_O_WISP) \
     F(EMBARGO) \
