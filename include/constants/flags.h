@@ -658,9 +658,9 @@
 
 #define FLAG_EXP_SHARE_ACTIVATION  0x264 // UF, Exp Share
 #define FLAG_VS_SEEKER_ACTIVATION  0x265 // UF, Vs Seeker
-#define FLAG_UNUSED_0x266  0x266 // Unused Flag
-#define FLAG_UNUSED_0x267  0x267 // Unused Flag
-#define FLAG_UNUSED_0x268  0x268 // Unused Flag
+#define FLAG_GET_DEXNAV  0x266 // UF, DexNav in Start Menu
+#define FLAG_DEXNAV_SEARCHING  0x267 // UF, DexNav Searching
+#define FLAG_DEXNAV_DETECTOR_MODE  0x268 // UF, DexNav Detector Mode
 #define FLAG_UNUSED_0x269  0x269 // Unused Flag
 #define FLAG_UNUSED_0x26A  0x26A // Unused Flag
 #define FLAG_UNUSED_0x26B  0x26B // Unused Flag
