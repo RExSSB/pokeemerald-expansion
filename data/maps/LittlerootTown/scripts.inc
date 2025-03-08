@@ -2051,6 +2051,22 @@ LittlerootTown_EventScript_NewSign::
 	return
 
 
+LittlerootTown_EventScript_NewPartner::
+# 1031 "data/maps/LittlerootTown/scripts.pory"
+	lockall
+# 1032 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_NewPartner_Text_0
+# 1033 "data/maps/LittlerootTown/scripts.pory"
+	waitmessage
+# 1034 "data/maps/LittlerootTown/scripts.pory"
+	releaseall
+	end
+
+
 LittlerootTown_EventScript_NewSign_Text_0:
 # 1026 "data/maps/LittlerootTown/scripts.pory"
 	.string "Hello World$"
+
+LittlerootTown_EventScript_NewPartner_Text_0:
+# 1032 "data/maps/LittlerootTown/scripts.pory"
+	.string "Hello! Want to pick a new partner?$"

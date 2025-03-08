@@ -1026,3 +1026,11 @@ script LittlerootTown_EventScript_NewSign {
     msgbox("Hello World")
     releaseall
 }
+
+script LittlerootTown_EventScript_NewPartner {
+	lockall
+	msgbox("Hello! Want to pick a new partner?")
+	waitmessage
+	releaseall
+	end
+}

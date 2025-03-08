@@ -662,7 +662,7 @@
 #define FLAG_DEXNAV_SEARCHING  0x267 // UF, DexNav Searching
 #define FLAG_DEXNAV_DETECTOR_MODE  0x268 // UF, DexNav Detector Mode
 #define FLAG_UNUSED_0x269  0x269 // Unused Flag
-#define FLAG_UNUSED_0x26A  0x26A // Unused Flag
+#define FLAG_NO_TRAINER_SEE  0x26A // UF, disables Trainer See. Debug only.
 #define FLAG_UNUSED_0x26B  0x26B // Unused Flag
 #define FLAG_UNUSED_0x26C  0x26C // Unused Flag
 #define FLAG_UNUSED_0x26D  0x26D // Unused Flag
