@@ -1031,6 +1031,9 @@ script LittlerootTown_EventScript_NewPartner {
 	lockall
 	msgbox("Hello! Want to pick a new partner?")
 	waitmessage
+	callnative(StartNewPokeballCaseUI)
+	waitstate
+	msgbox("Good luck on your journey!")
 	releaseall
 	end
 }

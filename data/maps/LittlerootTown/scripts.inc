@@ -2059,6 +2059,12 @@ LittlerootTown_EventScript_NewPartner::
 # 1033 "data/maps/LittlerootTown/scripts.pory"
 	waitmessage
 # 1034 "data/maps/LittlerootTown/scripts.pory"
+	callnative StartNewPokeballCaseUI
+# 1035 "data/maps/LittlerootTown/scripts.pory"
+	waitstate
+# 1036 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_NewPartner_Text_1
+# 1037 "data/maps/LittlerootTown/scripts.pory"
 	releaseall
 	end
 
@@ -2070,3 +2076,7 @@ LittlerootTown_EventScript_NewSign_Text_0:
 LittlerootTown_EventScript_NewPartner_Text_0:
 # 1032 "data/maps/LittlerootTown/scripts.pory"
 	.string "Hello! Want to pick a new partner?$"
+
+LittlerootTown_EventScript_NewPartner_Text_1:
+# 1036 "data/maps/LittlerootTown/scripts.pory"
+	.string "Good luck on your journey!$"
