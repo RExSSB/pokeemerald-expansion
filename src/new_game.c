@@ -211,6 +211,7 @@ void NewGameInitData(void)
     SetCurrentDifficultyLevel(DIFFICULTY_NORMAL);
     ResetItemFlags();
     ResetDexNav();
+    gSaveBlock3Ptr->followerIndex = OW_FOLLOWER_NOT_SET;
 }
 
 static void ResetMiniGamesRecords(void)
