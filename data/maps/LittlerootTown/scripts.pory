@@ -1029,11 +1029,14 @@ script LittlerootTown_EventScript_NewSign {
 
 script LittlerootTown_EventScript_NewPartner {
 	lockall
+	faceplayer
 	msgbox("Hello! Want to pick a new partner?")
 	waitmessage
 	callnative(StartNewPokeballCaseUI)
 	waitstate
 	msgbox("Good luck on your journey!")
+	applymovement(9, moves(face_down))
+	waitmovement(9)
 	releaseall
 	end
 }

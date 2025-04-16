@@ -2055,28 +2055,40 @@ LittlerootTown_EventScript_NewPartner::
 # 1031 "data/maps/LittlerootTown/scripts.pory"
 	lockall
 # 1032 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_NewPartner_Text_0
+	faceplayer
 # 1033 "data/maps/LittlerootTown/scripts.pory"
-	waitmessage
+	msgbox LittlerootTown_EventScript_NewPartner_Text_0
 # 1034 "data/maps/LittlerootTown/scripts.pory"
-	callnative StartNewPokeballCaseUI
+	waitmessage
 # 1035 "data/maps/LittlerootTown/scripts.pory"
-	waitstate
+	callnative StartNewPokeballCaseUI
 # 1036 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_NewPartner_Text_1
+	waitstate
 # 1037 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_NewPartner_Text_1
+# 1038 "data/maps/LittlerootTown/scripts.pory"
+	applymovement 9, LittlerootTown_EventScript_NewPartner_Movement_0
+# 1039 "data/maps/LittlerootTown/scripts.pory"
+	waitmovement 9
+# 1040 "data/maps/LittlerootTown/scripts.pory"
 	releaseall
 	end
 
+
+# 1038 "data/maps/LittlerootTown/scripts.pory"
+LittlerootTown_EventScript_NewPartner_Movement_0:
+# 1038 "data/maps/LittlerootTown/scripts.pory"
+	face_down
+	step_end
 
 LittlerootTown_EventScript_NewSign_Text_0:
 # 1026 "data/maps/LittlerootTown/scripts.pory"
 	.string "Hello World$"
 
 LittlerootTown_EventScript_NewPartner_Text_0:
-# 1032 "data/maps/LittlerootTown/scripts.pory"
+# 1033 "data/maps/LittlerootTown/scripts.pory"
 	.string "Hello! Want to pick a new partner?$"
 
 LittlerootTown_EventScript_NewPartner_Text_1:
-# 1036 "data/maps/LittlerootTown/scripts.pory"
+# 1037 "data/maps/LittlerootTown/scripts.pory"
 	.string "Good luck on your journey!$"
