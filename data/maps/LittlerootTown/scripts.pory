@@ -1040,3 +1040,21 @@ script LittlerootTown_EventScript_NewPartner {
 	releaseall
 	end
 }
+
+script LittlerootTown_EventScript_DummyBattle1 {
+	trainerbattle_single(TRAINER_DUMMY1, DummyIntro, DummyOutro)
+	lock
+	faceplayer
+	msgbox("I hope we'll fight again!")
+	waitmessage
+	release
+	end
+}
+
+text DummyIntro{
+	"Let's battle!"
+}
+
+text DummyOutro{
+	"You did great!"
+}

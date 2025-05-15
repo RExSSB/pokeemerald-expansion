@@ -2075,6 +2075,22 @@ LittlerootTown_EventScript_NewPartner::
 	end
 
 
+LittlerootTown_EventScript_DummyBattle1::
+# 1045 "data/maps/LittlerootTown/scripts.pory"
+	trainerbattle_single TRAINER_DUMMY1, DummyIntro, DummyOutro
+# 1046 "data/maps/LittlerootTown/scripts.pory"
+	lock
+# 1047 "data/maps/LittlerootTown/scripts.pory"
+	faceplayer
+# 1048 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_DummyBattle1_Text_0
+# 1049 "data/maps/LittlerootTown/scripts.pory"
+	waitmessage
+# 1050 "data/maps/LittlerootTown/scripts.pory"
+	release
+	end
+
+
 # 1038 "data/maps/LittlerootTown/scripts.pory"
 LittlerootTown_EventScript_NewPartner_Movement_0:
 # 1038 "data/maps/LittlerootTown/scripts.pory"
@@ -2092,3 +2108,15 @@ LittlerootTown_EventScript_NewPartner_Text_0:
 LittlerootTown_EventScript_NewPartner_Text_1:
 # 1037 "data/maps/LittlerootTown/scripts.pory"
 	.string "Good luck on your journey!$"
+
+LittlerootTown_EventScript_DummyBattle1_Text_0:
+# 1048 "data/maps/LittlerootTown/scripts.pory"
+	.string "I hope we'll fight again!$"
+
+DummyIntro::
+# 1054 "data/maps/LittlerootTown/scripts.pory"
+	.string "Let's battle!$"
+
+DummyOutro::
+# 1058 "data/maps/LittlerootTown/scripts.pory"
+	.string "You did great!$"
