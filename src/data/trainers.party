@@ -16882,8 +16882,25 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move / Ace Pokemon
 
-Ampharos (M) @ Ampharosite
+Pidgeot (M)
+Level: 38
+Ability: Keen Eye
+Ball: Great Ball
+- Quick Attack
+- Wing Attack
+- Agility
+
+Mawile
+Level: 37
+Ability: Intimidate
+- Play Rough
+- Bite
+- Fake Tears
+
+Ampharos (F) @ Ampharosite
 Level: 40
-Ability: Static
-Ball: Poke Ball
+IVs: 10 HP / 10 Atk / 10 Def / 10 SpA / 10 SpD / 10 Spe
+Tags: Ace
 - Thunderbolt
+- Dragon Pulse
+- Calm Mind

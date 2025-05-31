@@ -42192,29 +42192,70 @@ F_TRAINER_FEMALE |
         .doubleBattle = FALSE,
 #line 16883
         .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_ACE_POKEMON,
-        .partySize = 1,
+        .partySize = 3,
         .party = (const struct TrainerMon[])
         {
             {
 #line 16885
-            .species = SPECIES_AMPHAROS,
+            .species = SPECIES_PIDGEOT,
 #line 16885
             .gender = TRAINER_MON_MALE,
-#line 16885
-            .heldItem = ITEM_AMPHAROSITE,
 #line 16889
             .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
 #line 16887
-            .ability = ABILITY_STATIC,
+            .ability = ABILITY_KEEN_EYE,
 #line 16886
-            .lvl = 40,
+            .lvl = 38,
 #line 16888
-            .ball = ITEM_POKE_BALL,
+            .ball = ITEM_GREAT_BALL,
             .nature = NATURE_HARDY,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
 #line 16889
+                MOVE_QUICK_ATTACK,
+                MOVE_WING_ATTACK,
+                MOVE_AGILITY,
+            },
+            },
+            {
+#line 16893
+            .species = SPECIES_MAWILE,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16896
+            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
+#line 16895
+            .ability = ABILITY_INTIMIDATE,
+#line 16894
+            .lvl = 37,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 16896
+                MOVE_PLAY_ROUGH,
+                MOVE_BITE,
+                MOVE_FAKE_TEARS,
+            },
+            },
+            {
+#line 16900
+            .species = SPECIES_AMPHAROS,
+#line 16900
+            .gender = TRAINER_MON_FEMALE,
+#line 16900
+            .heldItem = ITEM_AMPHAROSITE,
+#line 16902
+            .iv = TRAINER_PARTY_IVS(10, 10, 10, 10, 10, 10),
+#line 16901
+            .lvl = 40,
+            .nature = NATURE_HARDY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+#line 16903
+            .tags = MON_POOL_TAG_ACE,
+            .moves = {
+#line 16904
                 MOVE_THUNDERBOLT,
+                MOVE_DRAGON_PULSE,
+                MOVE_CALM_MIND,
             },
             },
         },
