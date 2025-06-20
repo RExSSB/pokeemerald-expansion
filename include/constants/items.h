@@ -1019,10 +1019,20 @@
 
 #define ITEM_STRANGE_BALL 853
 
+// Emergence's Original Items
+
+// IV Modifiers (Original)
+#define ITEM_HEALTH_CANDY 854
+#define ITEM_MIGHTY_CANDY 855
+#define ITEM_TOUGH_CANDY 856
+#define ITEM_SMART_CANDY 857
+#define ITEM_COURAGE_CANDY 858
+#define ITEM_QUICK_CANDY 859
+
 // HOPO BERRY
 // LEGEND PLATE
 
-#define ITEMS_COUNT 854
+#define ITEMS_COUNT 860
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

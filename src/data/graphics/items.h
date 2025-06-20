@@ -2099,3 +2099,17 @@ const u16 gItemIconPalette_SwapSnack[] = INCBIN_U16("graphics/items/icon_palette
 
 const u32 gItemIcon_TwiceSpicedRadish[] = INCBIN_U32("graphics/items/icons/twice_spiced_radish.4bpp.lz");
 const u16 gItemIconPalette_TwiceSpicedRadish[] = INCBIN_U16("graphics/items/icon_palettes/twice_spiced_radish.gbapal");
+
+// Emergence's Original Items
+const u32 gItemIcon_HealthCandy[] = INCBIN_U32("graphics/items/icons/health_candy.4bpp.lz");
+const u16 gItemIconPalette_HealthCandy[] = INCBIN_U16("graphics/items/icon_palettes/health_candy.gbapal");
+const u32 gItemIcon_MightyCandy[] = INCBIN_U32("graphics/items/icons/mighty_candy.4bpp.lz");
+const u16 gItemIconPalette_MightyCandy[] = INCBIN_U16("graphics/items/icon_palettes/mighty_candy.gbapal");
+const u32 gItemIcon_ToughCandy[] = INCBIN_U32("graphics/items/icons/tough_candy.4bpp.lz");
+const u16 gItemIconPalette_ToughCandy[] = INCBIN_U16("graphics/items/icon_palettes/tough_candy.gbapal");
+const u32 gItemIcon_SmartCandy[] = INCBIN_U32("graphics/items/icons/smart_candy.4bpp.lz");
+const u16 gItemIconPalette_SmartCandy[] = INCBIN_U16("graphics/items/icon_palettes/smart_candy.gbapal");
+const u32 gItemIcon_CourageCandy[] = INCBIN_U32("graphics/items/icons/courage_candy.4bpp.lz");
+const u16 gItemIconPalette_CourageCandy[] = INCBIN_U16("graphics/items/icon_palettes/courage_candy.gbapal");
+const u32 gItemIcon_QuickCandy[] = INCBIN_U32("graphics/items/icons/quick_candy.4bpp.lz");
+const u16 gItemIconPalette_QuickCandy[] = INCBIN_U16("graphics/items/icon_palettes/quick_candy.gbapal");

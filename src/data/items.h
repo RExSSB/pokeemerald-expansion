@@ -14666,4 +14666,100 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_PokeshiDoll,
         .iconPalette = gItemIconPalette_PokeshiDoll,
     },
+
+    [ITEM_HEALTH_CANDY] =
+    {
+        .name = _("Health Candy"),
+        .price = 10000,
+        .description = COMPOUND_STRING(
+            "Candy that raises\n"
+            "the base HP of\n"
+            "a Pokémon."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IncreaseIV,
+        .secondaryId = STAT_HP,
+        .iconPic = gItemIcon_HealthCandy,
+        .iconPalette = gItemIconPalette_HealthCandy,
+    },
+
+    [ITEM_MIGHTY_CANDY] =
+    {
+        .name = _("Mighty Candy"),
+        .price = 10000,
+        .description = COMPOUND_STRING(
+            "Candy that raises\n"
+            "the base Attack of\n"
+            "a Pokémon"),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IncreaseIV,
+        .secondaryId = STAT_ATK,
+        .iconPic = gItemIcon_MightyCandy,
+        .iconPalette = gItemIconPalette_MightyCandy,
+    },
+
+    [ITEM_TOUGH_CANDY] =
+    {
+        .name = _("Tough Candy"),
+        .price = 10000,
+        .description = COMPOUND_STRING(
+            "Candy that raises\n"
+            "the base Defense\n"
+            "of a Pokémon."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IncreaseIV,
+        .secondaryId = STAT_DEF,
+        .iconPic = gItemIcon_ToughCandy,
+        .iconPalette = gItemIconPalette_ToughCandy,
+    },
+
+    [ITEM_SMART_CANDY] =
+    {
+        .name = _("Smart Candy"),
+        .price = 10000,
+        .description = COMPOUND_STRING(
+            "Candy that raises\n"
+            "the base Sp. Atk.\n"
+            "of a Pokémon."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IncreaseIV,
+        .secondaryId = STAT_SPATK,
+        .iconPic = gItemIcon_SmartCandy,
+        .iconPalette = gItemIconPalette_SmartCandy,
+    },
+
+    [ITEM_COURAGE_CANDY] =
+    {
+        .name = _("Courage Candy"),
+        .price = 10000,
+        .description = COMPOUND_STRING(
+            "Candy that raises\n"
+            "the base Sp. Def.\n"
+            "of a Pokémon."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IncreaseIV,
+        .secondaryId = STAT_SPDEF,
+        .iconPic = gItemIcon_CourageCandy,
+        .iconPalette = gItemIconPalette_CourageCandy,
+    },
+
+    [ITEM_QUICK_CANDY] =
+    {
+        .name = _("Quick Candy"),
+        .price = 10000,
+        .description = COMPOUND_STRING(
+            "Candy that raises\n"
+            "the base Speed of\n"
+            "a Pokémon."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_IncreaseIV,
+        .secondaryId = STAT_SPEED,
+        .iconPic = gItemIcon_QuickCandy,
+        .iconPalette = gItemIconPalette_QuickCandy,
+    },
 };

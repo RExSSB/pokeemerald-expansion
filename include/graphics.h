@@ -1740,6 +1740,20 @@ extern const u16 gItemIconPalette_SwapSnack[];
 extern const u32 gItemIcon_TwiceSpicedRadish[];
 extern const u16 gItemIconPalette_TwiceSpicedRadish[];
 
+// Emergence's Original Items
+extern const u32 gItemIcon_HealthCandy[];
+extern const u16 gItemIconPalette_HealthCandy[];
+extern const u32 gItemIcon_MightyCandy[];
+extern const u16 gItemIconPalette_MightyCandy[];
+extern const u32 gItemIcon_ToughCandy[];
+extern const u16 gItemIconPalette_ToughCandy[];
+extern const u32 gItemIcon_SmartCandy[];
+extern const u16 gItemIconPalette_SmartCandy[];
+extern const u32 gItemIcon_CourageCandy[];
+extern const u16 gItemIconPalette_CourageCandy[];
+extern const u32 gItemIcon_QuickCandy[];
+extern const u16 gItemIconPalette_QuickCandy[];
+
 extern const u32 gItemIcon_ReturnToFieldArrow[];
 extern const u16 gItemIconPalette_ReturnToFieldArrow[];
 
