@@ -14690,7 +14690,7 @@ const struct Item gItemsInfo[] =
         .description = COMPOUND_STRING(
             "Candy that raises\n"
             "the base Attack of\n"
-            "a Pokémon"),
+            "a Pokémon."),
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_IncreaseIV,
