@@ -2065,18 +2065,30 @@ LittlerootTown_EventScript_NewPartner::
 	end
 
 
-LittlerootTown_EventScript_DummyBattle1::
+LittlerootTown_EventScript_LeafTalking::
 # 1040 "data/maps/LittlerootTown/scripts.pory"
-	trainerbattle_single TRAINER_DUMMY1, DummyIntro, DummyOutro
+	lockall
 # 1041 "data/maps/LittlerootTown/scripts.pory"
-	lock
+	msgbox LeafDialogue, MSGBOX_NPC
 # 1042 "data/maps/LittlerootTown/scripts.pory"
-	faceplayer
-# 1043 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_DummyBattle1_Text_0
-# 1044 "data/maps/LittlerootTown/scripts.pory"
 	waitmessage
-# 1045 "data/maps/LittlerootTown/scripts.pory"
+# 1043 "data/maps/LittlerootTown/scripts.pory"
+	releaseall
+	end
+
+
+LittlerootTown_EventScript_DummyBattle1::
+# 1056 "data/maps/LittlerootTown/scripts.pory"
+	trainerbattle_single TRAINER_DUMMY1, DummyIntro, DummyOutro
+# 1057 "data/maps/LittlerootTown/scripts.pory"
+	lock
+# 1058 "data/maps/LittlerootTown/scripts.pory"
+	faceplayer
+# 1059 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_DummyBattle1_Text_0
+# 1060 "data/maps/LittlerootTown/scripts.pory"
+	waitmessage
+# 1061 "data/maps/LittlerootTown/scripts.pory"
 	release
 	end
 
@@ -2100,13 +2112,21 @@ LittlerootTown_EventScript_NewPartner_Text_1:
 	.string "Good luck on your journey!$"
 
 LittlerootTown_EventScript_DummyBattle1_Text_0:
-# 1043 "data/maps/LittlerootTown/scripts.pory"
+# 1059 "data/maps/LittlerootTown/scripts.pory"
 	.string "I hope we'll fight again!$"
 
+LeafDialogue::
+# 1047 "data/maps/LittlerootTown/scripts.pory"
+	.string "Looks like you're on a new PC...\n"
+	.string "That's awesome!\p"
+	.string "Anyway, there's someone that would like\n"
+	.string "to challenge you to a battle. You'll\l"
+	.string "find him up this rocky mound. Good luck!$"
+
 DummyIntro::
-# 1049 "data/maps/LittlerootTown/scripts.pory"
+# 1065 "data/maps/LittlerootTown/scripts.pory"
 	.string "Let's battle!$"
 
 DummyOutro::
-# 1053 "data/maps/LittlerootTown/scripts.pory"
+# 1069 "data/maps/LittlerootTown/scripts.pory"
 	.string "You did great!$"

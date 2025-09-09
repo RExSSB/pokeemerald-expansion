@@ -42191,30 +42191,137 @@ F_TRAINER_FEMALE |
 #line 16882
         .battleType = TRAINER_BATTLE_TYPE_SINGLES,
 #line 16883
-        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_ACE_POKEMON,
-        .partySize = 1,
+        .aiFlags = AI_FLAG_CHECK_BAD_MOVE | AI_FLAG_TRY_TO_FAINT | AI_FLAG_CHECK_VIABILITY | AI_FLAG_DOUBLE_ACE_POKEMON,
+        .partySize = 5,
         .party = (const struct TrainerMon[])
         {
             {
 #line 16885
-            .species = SPECIES_AMPHAROS,
+            .species = SPECIES_TORTERRA,
 #line 16885
             .gender = TRAINER_MON_MALE,
 #line 16885
-            .heldItem = ITEM_AMPHAROSITE,
-#line 16889
-            .iv = TRAINER_PARTY_IVS(31, 31, 31, 31, 31, 31),
-#line 16887
-            .ability = ABILITY_STATIC,
-#line 16886
-            .lvl = 40,
+            .heldItem = ITEM_LEFTOVERS,
 #line 16888
+            .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
+#line 16887
+            .ability = ABILITY_OVERGROW,
+#line 16886
+            .lvl = 50,
+#line 16889
             .ball = ITEM_POKE_BALL,
-            .nature = NATURE_HARDY,
+#line 16890
+            .nature = NATURE_ADAMANT,
             .dynamaxLevel = MAX_DYNAMAX_LEVEL,
             .moves = {
-#line 16889
-                MOVE_THUNDERBOLT,
+#line 16891
+                MOVE_WOOD_HAMMER,
+                MOVE_EARTHQUAKE,
+                MOVE_STEALTH_ROCK,
+                MOVE_SYNTHESIS,
+            },
+            },
+            {
+#line 16896
+            .species = SPECIES_SCIZOR,
+#line 16896
+            .gender = TRAINER_MON_MALE,
+#line 16896
+            .heldItem = ITEM_HEAVY_DUTY_BOOTS,
+#line 16899
+            .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
+#line 16898
+            .ability = ABILITY_TECHNICIAN,
+#line 16897
+            .lvl = 50,
+#line 16900
+            .ball = ITEM_NET_BALL,
+#line 16901
+            .nature = NATURE_CAREFUL,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 16902
+                MOVE_BULLET_PUNCH,
+                MOVE_U_TURN,
+                MOVE_KNOCK_OFF,
+                MOVE_SWORDS_DANCE,
+            },
+            },
+            {
+#line 16907
+            .species = SPECIES_PORYGON_Z,
+            .gender = TRAINER_MON_RANDOM_GENDER,
+#line 16907
+            .heldItem = ITEM_LIFE_ORB,
+#line 16910
+            .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
+#line 16909
+            .ability = ABILITY_ADAPTABILITY,
+#line 16908
+            .lvl = 50,
+#line 16911
+            .ball = ITEM_GREAT_BALL,
+#line 16912
+            .nature = NATURE_TIMID,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 16913
+                MOVE_TRI_ATTACK,
+                MOVE_ICE_BEAM,
+                MOVE_DARK_PULSE,
+                MOVE_PSYCHIC,
+            },
+            },
+            {
+#line 16918
+            .species = SPECIES_ABSOL,
+#line 16918
+            .gender = TRAINER_MON_MALE,
+#line 16918
+            .heldItem = ITEM_ABSOLITE,
+#line 16921
+            .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
+#line 16920
+            .ability = ABILITY_SUPER_LUCK,
+#line 16919
+            .lvl = 50,
+#line 16922
+            .ball = ITEM_PREMIER_BALL,
+#line 16923
+            .nature = NATURE_JOLLY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 16924
+                MOVE_NIGHT_SLASH,
+                MOVE_PSYCHO_CUT,
+                MOVE_SUCKER_PUNCH,
+                MOVE_SWORDS_DANCE,
+            },
+            },
+            {
+#line 16929
+            .species = SPECIES_GLISCOR,
+#line 16929
+            .gender = TRAINER_MON_MALE,
+#line 16929
+            .heldItem = ITEM_TOXIC_ORB,
+#line 16932
+            .iv = TRAINER_PARTY_IVS(0, 0, 0, 0, 0, 0),
+#line 16931
+            .ability = ABILITY_POISON_HEAL,
+#line 16930
+            .lvl = 50,
+#line 16933
+            .ball = ITEM_LUXURY_BALL,
+#line 16934
+            .nature = NATURE_JOLLY,
+            .dynamaxLevel = MAX_DYNAMAX_LEVEL,
+            .moves = {
+#line 16935
+                MOVE_EARTHQUAKE,
+                MOVE_KNOCK_OFF,
+                MOVE_SWORDS_DANCE,
+                MOVE_ROOST,
             },
             },
         },

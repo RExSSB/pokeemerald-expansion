@@ -16880,10 +16880,59 @@ Pic: Red
 Gender: Male
 Music: Male
 Double Battle: No
-AI: Check Bad Move / Ace Pokemon
+AI: Check Bad Move / Try to Faint / Check Viability / Double Ace Pokemon
 
-Ampharos (M) @ Ampharosite
-Level: 40
-Ability: Static
+Torterra (M) @ Leftovers
+Level: 50
+Ability: Overgrow
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 Ball: Poke Ball
-- Thunderbolt
+Nature: Adamant
+- Wood Hammer
+- Earthquake
+- Stealth Rock
+- Synthesis
+
+Scizor (M) @ Heavy-Duty Boots
+Level: 50
+Ability: Technician
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ball: Net Ball
+Nature: Careful
+- Bullet Punch
+- U-Turn
+- Knock Off
+- Swords Dance
+
+Porygon-Z @ Life Orb
+Level: 50
+Ability: Adaptability
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ball: Great Ball
+Nature: Timid
+- Tri Attack
+- Ice Beam
+- Dark Pulse
+- Psychic
+
+Absol (M) @ Absolite
+Level: 50
+Ability: Super Luck
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ball: Premier Ball
+Nature: Jolly
+- Night Slash
+- Psycho Cut
+- Sucker Punch
+- Swords Dance
+
+Gliscor (M) @ Toxic Orb
+Level: 50
+Ability: Poison Heal
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Ball: Luxury Ball
+Nature: Jolly
+- Earthquake
+- Knock Off
+- Swords Dance
+- Roost

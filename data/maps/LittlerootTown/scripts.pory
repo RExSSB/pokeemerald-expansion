@@ -1036,6 +1036,22 @@ script LittlerootTown_EventScript_NewPartner {
 	end
 }
 
+script LittlerootTown_EventScript_LeafTalking {
+	lockall
+	msgbox(LeafDialogue, MSGBOX_NPC)
+	waitmessage
+	releaseall
+	end
+}
+
+text LeafDialogue {
+	"Looks like you're on a new PC...\n"
+	"That's awesome!\p"
+	"Anyway, there's someone that would like\n"
+	"to challenge you to a battle. You'll\l"
+	"find him up this rocky mound. Good luck!"
+}
+
 script LittlerootTown_EventScript_DummyBattle1 {
 	trainerbattle_single(TRAINER_DUMMY1, DummyIntro, DummyOutro)
 	lock
