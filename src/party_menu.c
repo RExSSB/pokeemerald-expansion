@@ -8225,7 +8225,7 @@ void ItemUseCB_ReduceIV(u8 taskId, TaskFunc task)
     case STAT_SPEED:
         if (speed != 0)
         {
-            modifier = (speed >= 10) ? (speed - 10) : 0;
+            modifier = (speed >= 11) ? (speed - 11) : 0;
             SetMonData(mon, MON_DATA_SPEED_IV, &modifier);
             StringCopy(gStringVar2, gText_Speed2);
             didActivate = TRUE;

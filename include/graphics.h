@@ -1753,6 +1753,8 @@ extern const u32 gItemIcon_CourageCandy[];
 extern const u16 gItemIconPalette_CourageCandy[];
 extern const u32 gItemIcon_QuickCandy[];
 extern const u16 gItemIconPalette_QuickCandy[];
+extern const u32 gItemIcon_SluggishCandy[];
+extern const u16 gItemIconPalette_SluggishCandy[];
 
 extern const u32 gItemIcon_ReturnToFieldArrow[];
 extern const u16 gItemIconPalette_ReturnToFieldArrow[];
