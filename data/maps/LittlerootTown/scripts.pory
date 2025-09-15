@@ -1036,15 +1036,15 @@ script LittlerootTown_EventScript_NewPartner {
 	end
 }
 
-script LittlerootTown_EventScript_LeafTalking {
+script LittlerootTown_EventScript_MayTalking {
 	lockall
-	msgbox(LeafDialogue, MSGBOX_NPC)
+	msgbox(MayDialogueTest, MSGBOX_NPC)
 	waitmessage
 	releaseall
 	end
 }
 
-text LeafDialogue {
+text MayDialogueTest {
 	"Looks like you're on a new PC...\n"
 	"That's awesome!\p"
 	"Anyway, there's someone that would like\n"
@@ -1053,7 +1053,7 @@ text LeafDialogue {
 }
 
 script LittlerootTown_EventScript_DummyBattle1 {
-	trainerbattle_single(TRAINER_DUMMY1, DummyIntro, DummyOutro)
+	trainerbattle_single(TRAINER_DUMMY1, Dummy1Intro, Dummy1Outro)
 	lock
 	faceplayer
 	msgbox("I hope we'll fight again!")
@@ -1062,10 +1062,28 @@ script LittlerootTown_EventScript_DummyBattle1 {
 	end
 }
 
-text DummyIntro{
+text Dummy1Intro{
 	"Let's battle!"
 }
 
-text DummyOutro{
+text Dummy1Outro{
 	"You did great!"
+}
+
+script LittlerootTown_EventScript_DummyBattle2 {
+	trainerbattle_single(TRAINER_DUMMY2, Dummy2Intro, Dummy2Outro)
+	lock
+	faceplayer
+	msgbox("That was a great battle!")
+	waitmessage
+	release
+	end
+}
+
+text Dummy2Intro{
+	"Let's fight!"
+}
+
+text Dummy2Outro{
+	"Well played!"
 }

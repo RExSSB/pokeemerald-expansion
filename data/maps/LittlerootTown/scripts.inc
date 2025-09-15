@@ -2065,11 +2065,11 @@ LittlerootTown_EventScript_NewPartner::
 	end
 
 
-LittlerootTown_EventScript_LeafTalking::
+LittlerootTown_EventScript_MayTalking::
 # 1040 "data/maps/LittlerootTown/scripts.pory"
 	lockall
 # 1041 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LeafDialogue, MSGBOX_NPC
+	msgbox MayDialogueTest, MSGBOX_NPC
 # 1042 "data/maps/LittlerootTown/scripts.pory"
 	waitmessage
 # 1043 "data/maps/LittlerootTown/scripts.pory"
@@ -2079,7 +2079,7 @@ LittlerootTown_EventScript_LeafTalking::
 
 LittlerootTown_EventScript_DummyBattle1::
 # 1056 "data/maps/LittlerootTown/scripts.pory"
-	trainerbattle_single TRAINER_DUMMY1, DummyIntro, DummyOutro
+	trainerbattle_single TRAINER_DUMMY1, Dummy1Intro, Dummy1Outro
 # 1057 "data/maps/LittlerootTown/scripts.pory"
 	lock
 # 1058 "data/maps/LittlerootTown/scripts.pory"
@@ -2089,6 +2089,22 @@ LittlerootTown_EventScript_DummyBattle1::
 # 1060 "data/maps/LittlerootTown/scripts.pory"
 	waitmessage
 # 1061 "data/maps/LittlerootTown/scripts.pory"
+	release
+	end
+
+
+LittlerootTown_EventScript_DummyBattle2::
+# 1074 "data/maps/LittlerootTown/scripts.pory"
+	trainerbattle_single TRAINER_DUMMY2, Dummy2Intro, Dummy2Outro
+# 1075 "data/maps/LittlerootTown/scripts.pory"
+	lock
+# 1076 "data/maps/LittlerootTown/scripts.pory"
+	faceplayer
+# 1077 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_DummyBattle2_Text_0
+# 1078 "data/maps/LittlerootTown/scripts.pory"
+	waitmessage
+# 1079 "data/maps/LittlerootTown/scripts.pory"
 	release
 	end
 
@@ -2115,7 +2131,11 @@ LittlerootTown_EventScript_DummyBattle1_Text_0:
 # 1059 "data/maps/LittlerootTown/scripts.pory"
 	.string "I hope we'll fight again!$"
 
-LeafDialogue::
+LittlerootTown_EventScript_DummyBattle2_Text_0:
+# 1077 "data/maps/LittlerootTown/scripts.pory"
+	.string "That was a great battle!$"
+
+MayDialogueTest::
 # 1047 "data/maps/LittlerootTown/scripts.pory"
 	.string "Looks like you're on a new PC...\n"
 	.string "That's awesome!\p"
@@ -2123,10 +2143,18 @@ LeafDialogue::
 	.string "to challenge you to a battle. You'll\l"
 	.string "find him up this rocky mound. Good luck!$"
 
-DummyIntro::
+Dummy1Intro::
 # 1065 "data/maps/LittlerootTown/scripts.pory"
 	.string "Let's battle!$"
 
-DummyOutro::
+Dummy1Outro::
 # 1069 "data/maps/LittlerootTown/scripts.pory"
 	.string "You did great!$"
+
+Dummy2Intro::
+# 1083 "data/maps/LittlerootTown/scripts.pory"
+	.string "Let's fight!$"
+
+Dummy2Outro::
+# 1087 "data/maps/LittlerootTown/scripts.pory"
+	.string "Well played!$"
