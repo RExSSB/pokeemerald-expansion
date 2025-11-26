@@ -1424,3 +1424,50 @@ script SlateportCity_EventScript_MunchlaxEating{
     release
     end
 }
+
+// Plusle & Ledyba Battle
+
+script SlateportCity_EventScript_PlusleCry{
+	lock
+	playmoncry(SPECIES_PLUSLE, CRY_MODE_NORMAL)
+	msgbox("Plusle: Plusle!", MSGBOX_DEFAULT)
+	waitmoncry
+	release
+	end
+}
+
+script SlateportCity_EventScript_LedybaCry{
+	lock
+	playmoncry(SPECIES_LEDYBA, CRY_MODE_NORMAL)
+	msgbox("Ledyba: Ledyba!", MSGBOX_DEFAULT)
+	waitmoncry
+	release
+	end
+}
+
+script SlateportCity_EventScript_PlusleAndLedybaFight{
+	lockall
+	applymovement(39, moves(walk_in_place_right, face_right))
+	waitmovement(39)
+	msgbox("Youngster: Plusle, use Tackle!", MSGBOX_DEFAULT)
+	closemessage
+	playmoncry(SPECIES_PLUSLE, CRY_MODE_NORMAL)
+	waitmoncry
+	applymovement(41, PlusleAttack)
+	waitmovement(41)
+	applymovement(40, moves(jump_in_place_left * 2))
+	waitmovement(40)
+	msgbox("Boy: Ledyba, use Leer!", MSGBOX_DEFAULT)
+	closemessage
+	playmoncry(SPECIES_LEDYBA, CRY_MODE_NORMAL)
+	waitmoncry
+	releaseall
+	end
+}
+
+movement PlusleAttack{
+	jump_in_place_right * 2
+	jump_right
+	walk_left_affine
+	face_right
+}

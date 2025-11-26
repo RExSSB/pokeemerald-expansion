@@ -546,7 +546,7 @@
       "flag": "FLAG_ITEM_LEFTOVERS"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_BOY_1",
+      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
       "x": 32,
       "y": 15,
       "elevation": 0,
@@ -555,7 +555,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "SlateportCity_EventScript_PlusleAndLedybaFight",
       "flag": "0"
     },
     {
@@ -568,7 +568,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "SlateportCity_EventScript_PlusleAndLedybaFight",
       "flag": "0"
     },
     {
@@ -581,7 +581,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "SlateportCity_EventScript_PlusleCry",
       "flag": "0"
     },
     {
@@ -594,7 +594,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "SlateportCity_EventScript_LedybaCry",
       "flag": "0"
     }
   ],

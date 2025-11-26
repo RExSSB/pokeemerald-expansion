@@ -2825,6 +2825,84 @@ SlateportCity_EventScript_MunchlaxEating::
 	end
 
 
+SlateportCity_EventScript_PlusleCry::
+# 1431 "data/maps/SlateportCity/scripts.pory"
+	lock
+# 1432 "data/maps/SlateportCity/scripts.pory"
+	playmoncry SPECIES_PLUSLE, CRY_MODE_NORMAL
+# 1433 "data/maps/SlateportCity/scripts.pory"
+	msgbox SlateportCity_EventScript_PlusleCry_Text_0, MSGBOX_DEFAULT
+# 1434 "data/maps/SlateportCity/scripts.pory"
+	waitmoncry
+# 1435 "data/maps/SlateportCity/scripts.pory"
+	release
+	end
+
+
+SlateportCity_EventScript_LedybaCry::
+# 1440 "data/maps/SlateportCity/scripts.pory"
+	lock
+# 1441 "data/maps/SlateportCity/scripts.pory"
+	playmoncry SPECIES_LEDYBA, CRY_MODE_NORMAL
+# 1442 "data/maps/SlateportCity/scripts.pory"
+	msgbox SlateportCity_EventScript_LedybaCry_Text_0, MSGBOX_DEFAULT
+# 1443 "data/maps/SlateportCity/scripts.pory"
+	waitmoncry
+# 1444 "data/maps/SlateportCity/scripts.pory"
+	release
+	end
+
+
+SlateportCity_EventScript_PlusleAndLedybaFight::
+# 1449 "data/maps/SlateportCity/scripts.pory"
+	lockall
+# 1450 "data/maps/SlateportCity/scripts.pory"
+	applymovement 39, SlateportCity_EventScript_PlusleAndLedybaFight_Movement_0
+# 1451 "data/maps/SlateportCity/scripts.pory"
+	waitmovement 39
+# 1452 "data/maps/SlateportCity/scripts.pory"
+	msgbox SlateportCity_EventScript_PlusleAndLedybaFight_Text_0, MSGBOX_DEFAULT
+# 1453 "data/maps/SlateportCity/scripts.pory"
+	closemessage
+# 1454 "data/maps/SlateportCity/scripts.pory"
+	playmoncry SPECIES_PLUSLE, CRY_MODE_NORMAL
+# 1455 "data/maps/SlateportCity/scripts.pory"
+	waitmoncry
+# 1456 "data/maps/SlateportCity/scripts.pory"
+	applymovement 41, PlusleAttack
+# 1457 "data/maps/SlateportCity/scripts.pory"
+	waitmovement 41
+# 1458 "data/maps/SlateportCity/scripts.pory"
+	applymovement 40, SlateportCity_EventScript_PlusleAndLedybaFight_Movement_1
+# 1459 "data/maps/SlateportCity/scripts.pory"
+	waitmovement 40
+# 1460 "data/maps/SlateportCity/scripts.pory"
+	msgbox SlateportCity_EventScript_PlusleAndLedybaFight_Text_1, MSGBOX_DEFAULT
+# 1461 "data/maps/SlateportCity/scripts.pory"
+	closemessage
+# 1462 "data/maps/SlateportCity/scripts.pory"
+	playmoncry SPECIES_LEDYBA, CRY_MODE_NORMAL
+# 1463 "data/maps/SlateportCity/scripts.pory"
+	waitmoncry
+# 1464 "data/maps/SlateportCity/scripts.pory"
+	releaseall
+	end
+
+
+# 1468 "data/maps/SlateportCity/scripts.pory"
+PlusleAttack:
+# 1469 "data/maps/SlateportCity/scripts.pory"
+	jump_in_place_right
+# 1469 "data/maps/SlateportCity/scripts.pory"
+	jump_in_place_right
+# 1470 "data/maps/SlateportCity/scripts.pory"
+	jump_right
+# 1471 "data/maps/SlateportCity/scripts.pory"
+	walk_left_affine
+# 1472 "data/maps/SlateportCity/scripts.pory"
+	face_right
+	step_end
+
 # 1370 "data/maps/SlateportCity/scripts.pory"
 SlateportCity_EventScript_MunchlaxLeftovers_Movement_0:
 # 1370 "data/maps/SlateportCity/scripts.pory"
@@ -2845,9 +2923,41 @@ SlateportCity_EventScript_MunchlaxLeftovers_Movement_2:
 	face_right
 	step_end
 
+# 1450 "data/maps/SlateportCity/scripts.pory"
+SlateportCity_EventScript_PlusleAndLedybaFight_Movement_0:
+# 1450 "data/maps/SlateportCity/scripts.pory"
+	walk_in_place_right
+# 1450 "data/maps/SlateportCity/scripts.pory"
+	face_right
+	step_end
+
+# 1458 "data/maps/SlateportCity/scripts.pory"
+SlateportCity_EventScript_PlusleAndLedybaFight_Movement_1:
+# 1458 "data/maps/SlateportCity/scripts.pory"
+	jump_in_place_left
+# 1458 "data/maps/SlateportCity/scripts.pory"
+	jump_in_place_left
+	step_end
+
 SlateportCity_EventScript_MunchlaxEating_Text_0:
 # 1422 "data/maps/SlateportCity/scripts.pory"
 	.string "Munchlax is to busy eating.$"
+
+SlateportCity_EventScript_PlusleCry_Text_0:
+# 1433 "data/maps/SlateportCity/scripts.pory"
+	.string "Plusle: Plusle!$"
+
+SlateportCity_EventScript_LedybaCry_Text_0:
+# 1442 "data/maps/SlateportCity/scripts.pory"
+	.string "Ledyba: Ledyba!$"
+
+SlateportCity_EventScript_PlusleAndLedybaFight_Text_0:
+# 1452 "data/maps/SlateportCity/scripts.pory"
+	.string "Youngster: Plusle, use Tackle!$"
+
+SlateportCity_EventScript_PlusleAndLedybaFight_Text_1:
+# 1460 "data/maps/SlateportCity/scripts.pory"
+	.string "Boy: Ledyba, use Leer!$"
 
 MunchlaxTrainerHappy::
 # 1392 "data/maps/SlateportCity/scripts.pory"
