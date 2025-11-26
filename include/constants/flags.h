@@ -1223,9 +1223,9 @@
 #define FLAG_ITEM_SAFARI_ZONE_SOUTH_EAST_BIG_PEARL                  0x492
 
 #define FLAG_ITEM_TM_PSYSHOCK                                          0x493 // UF, Used in Littleroot for now
-#define FLAG_UNUSED_0x494                                           0x494 // Unused Flag
-#define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
-#define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
+#define FLAG_ITEM_LEFTOVERS                                          0x494 // UF, Used in Slateport for now
+#define FLAG_MUNCHLAX_LEFTOVERS                                           0x495 // UF, Used in Slateport for now
+#define FLAG_TRAINER_MUNCHLAX_LEFTOVERS                                          0x496 // UF, Used in Slateport for now
 #define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
 #define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
 #define FLAG_UNUSED_0x499                                           0x499 // Unused Flag
