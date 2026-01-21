@@ -1471,3 +1471,85 @@ movement PlusleAttack{
 	walk_left_affine
 	face_right
 }
+
+// Mega Evolution in Overworld
+// Would later need to add a flag to make sure the script doesn't repeat itself if you talk back to the girl without reloading the map (it would need to just repeat the last line of the script)
+
+script SlateportCity_EventScript_GirlMega{
+	lockall
+	faceplayer
+	msgbox(GirlMegaEvolution, MSGBOX_YESNO)
+	if(var(VAR_RESULT) == YES) {
+		addobject(45)
+		hideobjectat(45, MAP_SLATEPORT_CITY)
+		setobjectxy(45, 16, 11)
+		applymovement(43, moves(face_right))
+		waitmovement(43)
+		msgbox(GirlMegaEvolvesAmpharos, MSGBOX_DEFAULT)
+		waitmessage
+		closemessage
+		playmoncry(SPECIES_AMPHAROS, CRY_MODE_NORMAL)
+		applymovement(44, moves(face_down))
+		waitmovement(44)
+		waitmoncry
+		fadescreenswapbuffers(FADE_TO_WHITE)
+		delay(8)
+		hideobjectat(44, MAP_SLATEPORT_CITY)
+		setobjectxy(44, 34, 1)
+		showobjectat(45, MAP_SLATEPORT_CITY)
+		delay(8)
+		fadescreenswapbuffers(FADE_FROM_WHITE)
+		delay(20)
+		playse(SE_PIN)
+		applymovement(43, moves(emote_exclamation_mark))
+		waitmovement(43)
+		delay(60)
+		msgbox(GirlHyped, MSGBOX_NPC)
+	}
+	else {
+		msgbox(GirlDisappointed, MSGBOX_DEFAULT)
+	}
+	releaseall
+	end
+}
+
+text GirlMegaEvolution{
+	"My Ampharos and I have been training\n"
+	"really hard lately. We're now able to use\l"
+	"Mega Evolution! Want me to show ya?"
+}
+
+text GirlMegaEvolvesAmpharos{
+	"Excellent! Ampharos, let's show them\n"
+	"what we learned!\p"
+	"Link our souls as one! Transcend\n"
+	"evolution! Mega evolve!!"
+}
+
+text GirlHyped{
+	"Did you see how cool that was? With the\n"
+	"power of Mega Evolution, we'll be\l"
+	"unstoppable!"
+}
+
+text GirlDisappointed{
+	"Oh, that's too bad. I was really pumped\n"
+	"to show off our new skill. Maybe some\l"
+	"other time?"
+}
+
+script SlateportCity_EventScript_Ampharos{
+	lock
+	playmoncry(SPECIES_AMPHAROS, CRY_MODE_NORMAL)
+	msgbox("Ampharos: Ampha!", MSGBOX_NPC)
+	waitmoncry
+	release
+	end
+}
+
+script SlateportCity_EventScript_MegaAmpharos{
+	lock
+	msgbox("A powerful energy is emerging from Mega\nAmpharos!")
+	release
+	end
+}

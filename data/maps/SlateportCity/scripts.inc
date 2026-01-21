@@ -2903,6 +2903,101 @@ PlusleAttack:
 	face_right
 	step_end
 
+SlateportCity_EventScript_GirlMega::
+# 1478 "data/maps/SlateportCity/scripts.pory"
+	lockall
+# 1479 "data/maps/SlateportCity/scripts.pory"
+	faceplayer
+# 1480 "data/maps/SlateportCity/scripts.pory"
+	msgbox GirlMegaEvolution, MSGBOX_YESNO
+# 1481 "data/maps/SlateportCity/scripts.pory"
+	compare VAR_RESULT, YES
+	goto_if_eq SlateportCity_EventScript_GirlMega_2
+# 1509 "data/maps/SlateportCity/scripts.pory"
+	msgbox GirlDisappointed, MSGBOX_DEFAULT
+SlateportCity_EventScript_GirlMega_1:
+# 1511 "data/maps/SlateportCity/scripts.pory"
+	releaseall
+	end
+
+SlateportCity_EventScript_GirlMega_2:
+# 1482 "data/maps/SlateportCity/scripts.pory"
+	addobject 45
+# 1483 "data/maps/SlateportCity/scripts.pory"
+	hideobjectat 45, MAP_SLATEPORT_CITY
+# 1484 "data/maps/SlateportCity/scripts.pory"
+	setobjectxy 45, 16, 11
+# 1485 "data/maps/SlateportCity/scripts.pory"
+	applymovement 43, SlateportCity_EventScript_MunchlaxLeftovers_Movement_2
+# 1486 "data/maps/SlateportCity/scripts.pory"
+	waitmovement 43
+# 1487 "data/maps/SlateportCity/scripts.pory"
+	msgbox GirlMegaEvolvesAmpharos, MSGBOX_DEFAULT
+# 1488 "data/maps/SlateportCity/scripts.pory"
+	waitmessage
+# 1489 "data/maps/SlateportCity/scripts.pory"
+	closemessage
+# 1490 "data/maps/SlateportCity/scripts.pory"
+	playmoncry SPECIES_AMPHAROS, CRY_MODE_NORMAL
+# 1491 "data/maps/SlateportCity/scripts.pory"
+	applymovement 44, SlateportCity_EventScript_GirlMega_Movement_0
+# 1492 "data/maps/SlateportCity/scripts.pory"
+	waitmovement 44
+# 1493 "data/maps/SlateportCity/scripts.pory"
+	waitmoncry
+# 1494 "data/maps/SlateportCity/scripts.pory"
+	fadescreenswapbuffers FADE_TO_WHITE
+# 1495 "data/maps/SlateportCity/scripts.pory"
+	delay 8
+# 1496 "data/maps/SlateportCity/scripts.pory"
+	hideobjectat 44, MAP_SLATEPORT_CITY
+# 1497 "data/maps/SlateportCity/scripts.pory"
+	setobjectxy 44, 34, 1
+# 1498 "data/maps/SlateportCity/scripts.pory"
+	showobjectat 45, MAP_SLATEPORT_CITY
+# 1499 "data/maps/SlateportCity/scripts.pory"
+	delay 8
+# 1500 "data/maps/SlateportCity/scripts.pory"
+	fadescreenswapbuffers FADE_FROM_WHITE
+# 1501 "data/maps/SlateportCity/scripts.pory"
+	delay 20
+# 1502 "data/maps/SlateportCity/scripts.pory"
+	playse SE_PIN
+# 1503 "data/maps/SlateportCity/scripts.pory"
+	applymovement 43, SlateportCity_EventScript_GirlMega_Movement_1
+# 1504 "data/maps/SlateportCity/scripts.pory"
+	waitmovement 43
+# 1505 "data/maps/SlateportCity/scripts.pory"
+	delay 60
+# 1506 "data/maps/SlateportCity/scripts.pory"
+	msgbox GirlHyped, MSGBOX_NPC
+	goto SlateportCity_EventScript_GirlMega_1
+
+
+SlateportCity_EventScript_Ampharos::
+# 1541 "data/maps/SlateportCity/scripts.pory"
+	lock
+# 1542 "data/maps/SlateportCity/scripts.pory"
+	playmoncry SPECIES_AMPHAROS, CRY_MODE_NORMAL
+# 1543 "data/maps/SlateportCity/scripts.pory"
+	msgbox SlateportCity_EventScript_Ampharos_Text_0, MSGBOX_NPC
+# 1544 "data/maps/SlateportCity/scripts.pory"
+	waitmoncry
+# 1545 "data/maps/SlateportCity/scripts.pory"
+	release
+	end
+
+
+SlateportCity_EventScript_MegaAmpharos::
+# 1550 "data/maps/SlateportCity/scripts.pory"
+	lock
+# 1551 "data/maps/SlateportCity/scripts.pory"
+	msgbox SlateportCity_EventScript_MegaAmpharos_Text_0
+# 1552 "data/maps/SlateportCity/scripts.pory"
+	release
+	end
+
+
 # 1370 "data/maps/SlateportCity/scripts.pory"
 SlateportCity_EventScript_MunchlaxLeftovers_Movement_0:
 # 1370 "data/maps/SlateportCity/scripts.pory"
@@ -2939,6 +3034,18 @@ SlateportCity_EventScript_PlusleAndLedybaFight_Movement_1:
 	jump_in_place_left
 	step_end
 
+# 1491 "data/maps/SlateportCity/scripts.pory"
+SlateportCity_EventScript_GirlMega_Movement_0:
+# 1491 "data/maps/SlateportCity/scripts.pory"
+	face_down
+	step_end
+
+# 1503 "data/maps/SlateportCity/scripts.pory"
+SlateportCity_EventScript_GirlMega_Movement_1:
+# 1503 "data/maps/SlateportCity/scripts.pory"
+	emote_exclamation_mark
+	step_end
+
 SlateportCity_EventScript_MunchlaxEating_Text_0:
 # 1422 "data/maps/SlateportCity/scripts.pory"
 	.string "Munchlax is to busy eating.$"
@@ -2959,6 +3066,14 @@ SlateportCity_EventScript_PlusleAndLedybaFight_Text_1:
 # 1460 "data/maps/SlateportCity/scripts.pory"
 	.string "Boy: Ledyba, use Leer!$"
 
+SlateportCity_EventScript_Ampharos_Text_0:
+# 1543 "data/maps/SlateportCity/scripts.pory"
+	.string "Ampharos: Ampha!$"
+
+SlateportCity_EventScript_MegaAmpharos_Text_0:
+# 1551 "data/maps/SlateportCity/scripts.pory"
+	.string "A powerful energy is emerging from Mega\nAmpharos!$"
+
 MunchlaxTrainerHappy::
 # 1392 "data/maps/SlateportCity/scripts.pory"
 	.string "My Munchlax and I love to come to the\n"
@@ -2976,3 +3091,28 @@ MunchlaxTrainerMad::
 MunchlaxCry::
 # 1406 "data/maps/SlateportCity/scripts.pory"
 	.string "Munchlax: Lax!$"
+
+GirlMegaEvolution::
+# 1515 "data/maps/SlateportCity/scripts.pory"
+	.string "My Ampharos and I have been training\n"
+	.string "really hard lately. We're now able to use\l"
+	.string "Mega Evolution! Want me to show ya?$"
+
+GirlMegaEvolvesAmpharos::
+# 1521 "data/maps/SlateportCity/scripts.pory"
+	.string "Excellent! Ampharos, let's show them\n"
+	.string "what we learned!\p"
+	.string "Link our souls as one! Transcend\n"
+	.string "evolution! Mega evolve!!$"
+
+GirlHyped::
+# 1528 "data/maps/SlateportCity/scripts.pory"
+	.string "Did you see how cool that was? With the\n"
+	.string "power of Mega Evolution, we'll be\l"
+	.string "unstoppable!$"
+
+GirlDisappointed::
+# 1534 "data/maps/SlateportCity/scripts.pory"
+	.string "Oh, that's too bad. I was really pumped\n"
+	.string "to show off our new skill. Maybe some\l"
+	.string "other time?$"
