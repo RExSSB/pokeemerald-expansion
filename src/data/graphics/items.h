@@ -2115,3 +2115,5 @@ const u32 gItemIcon_QuickCandy[] = INCBIN_U32("graphics/items/icons/quick_candy.
 const u16 gItemIconPalette_QuickCandy[] = INCBIN_U16("graphics/items/icon_palettes/quick_candy.gbapal");
 const u32 gItemIcon_SluggishCandy[] = INCBIN_U32("graphics/items/icons/sluggish_candy.4bpp.lz");
 const u16 gItemIconPalette_SluggishCandy[] = INCBIN_U16("graphics/items/icon_palettes/sluggish_candy.gbapal");
+const u32 gItemIcon_PunyCandy[] = INCBIN_U32("graphics/items/icons/puny_candy.4bpp.lz");
+const u16 gItemIconPalette_PunyCandy[] = INCBIN_U16("graphics/items/icon_palettes/puny_candy.gbapal");

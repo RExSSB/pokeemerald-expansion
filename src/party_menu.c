@@ -8213,7 +8213,7 @@ void ItemUseCB_ReduceIV(u8 taskId, TaskFunc task)
     case STAT_ATK:
         if (attack != 0)
         {
-            modifier = (attack >= 10) ? (attack - 10) : 0;
+            modifier = (attack >= 11) ? (attack - 11) : 0;
             SetMonData(mon, MON_DATA_ATK_IV, &modifier);
             StringCopy(gStringVar2, gText_Attack3);
             didActivate = TRUE;

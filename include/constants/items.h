@@ -1029,11 +1029,12 @@
 #define ITEM_COURAGE_CANDY 858
 #define ITEM_QUICK_CANDY 859
 #define ITEM_SLUGGISH_CANDY 860
+#define ITEM_PUNY_CANDY 861
 
 // HOPO BERRY
 // LEGEND PLATE
 
-#define ITEMS_COUNT 861
+#define ITEMS_COUNT 862
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

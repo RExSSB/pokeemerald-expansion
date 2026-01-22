@@ -14778,4 +14778,20 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_SluggishCandy,
         .iconPalette = gItemIconPalette_SluggishCandy,
     },
+
+    [ITEM_PUNY_CANDY] =
+    {
+        .name = _("Puny Candy"),
+        .price = 10000,
+        .description = COMPOUND_STRING(
+            "Candy that lowers\n"
+            "the base Attack of\n"
+            "a Pokémon."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_ReduceIV,
+        .secondaryId = STAT_ATK,
+        .iconPic = gItemIcon_PunyCandy,
+        .iconPalette = gItemIconPalette_PunyCandy,
+    },
 };

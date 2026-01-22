@@ -1755,6 +1755,8 @@ extern const u32 gItemIcon_QuickCandy[];
 extern const u16 gItemIconPalette_QuickCandy[];
 extern const u32 gItemIcon_SluggishCandy[];
 extern const u16 gItemIconPalette_SluggishCandy[];
+extern const u32 gItemIcon_PunyCandy[];
+extern const u16 gItemIconPalette_PunyCandy[];
 
 extern const u32 gItemIcon_ReturnToFieldArrow[];
 extern const u16 gItemIconPalette_ReturnToFieldArrow[];
