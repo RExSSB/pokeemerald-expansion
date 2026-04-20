@@ -14794,4 +14794,20 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_PunyCandy,
         .iconPalette = gItemIconPalette_PunyCandy,
     },
+
+    [ITEM_ANCIENT_CHARM] =
+    {
+        .name = _("Ancient Charm"),
+        .price = 15000,
+        .description = COMPOUND_STRING(
+            "A curious charm\n"
+            "that makes some\n"
+            "Pokémon evolve."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
+        .effect = gItemEffect_EvoItem,
+        .iconPic = gItemIcon_AncientCharm,
+        .iconPalette = gItemIconPalette_AncientCharm,
+    },
 };
