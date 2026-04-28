@@ -2119,3 +2119,5 @@ const u32 gItemIcon_PunyCandy[] = INCBIN_U32("graphics/items/icons/puny_candy.4b
 const u16 gItemIconPalette_PunyCandy[] = INCBIN_U16("graphics/items/icon_palettes/puny_candy.gbapal");
 const u32 gItemIcon_AncientCharm[] = INCBIN_U32("graphics/items/icons/ancient_charm.4bpp.lz");
 const u16 gItemIconPalette_AncientCharm[] = INCBIN_U16("graphics/items/icon_palettes/ancient_charm.gbapal");
+const u32 gItemIcon_TopHat[] = INCBIN_U32("graphics/items/icons/top_hat.4bpp.lz");
+const u16 gItemIconPalette_TopHat[] = INCBIN_U16("graphics/items/icon_palettes/top_hat.gbapal");

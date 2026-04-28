@@ -1759,6 +1759,8 @@ extern const u32 gItemIcon_PunyCandy[];
 extern const u16 gItemIconPalette_PunyCandy[];
 extern const u32 gItemIcon_AncientCharm[];
 extern const u16 gItemIconPalette_AncientCharm[];
+extern const u32 gItemIcon_TopHat[];
+extern const u16 gItemIconPalette_TopHat[];
 
 extern const u32 gItemIcon_ReturnToFieldArrow[];
 extern const u16 gItemIconPalette_ReturnToFieldArrow[];

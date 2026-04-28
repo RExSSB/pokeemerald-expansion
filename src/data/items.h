@@ -14810,4 +14810,20 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_AncientCharm,
         .iconPalette = gItemIconPalette_AncientCharm,
     },
+
+    [ITEM_TOP_HAT] =
+    {
+        .name = _("Top Hat"),
+        .price = 2000,
+        .description = COMPOUND_STRING(
+            "A fancy hat\n"
+            "loved by a\n"
+            "certain Pokémon."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
+        .effect = gItemEffect_EvoItem,
+        .iconPic = gItemIcon_TopHat,
+        .iconPalette = gItemIconPalette_TopHat,
+    },
 };

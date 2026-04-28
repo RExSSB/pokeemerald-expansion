@@ -1033,11 +1033,12 @@
 
 // New Evolution Items (Original)
 #define ITEM_ANCIENT_CHARM 862
+#define ITEM_TOP_HAT 863
 
 // HOPO BERRY
 // LEGEND PLATE
 
-#define ITEMS_COUNT 863
+#define ITEMS_COUNT 864
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations
