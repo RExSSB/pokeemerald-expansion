@@ -4420,6 +4420,16 @@
       "secondary_tileset": "gTileset_Lab",
       "border_filepath": "data/layouts/NewBirchLab/border.bin",
       "blockdata_filepath": "data/layouts/NewBirchLab/map.bin"
+    },
+    {
+      "id": "LAYOUT_TEST_ROUTE1",
+      "name": "TestRoute1_Layout",
+      "width": 64,
+      "height": 27,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/TestRoute1/border.bin",
+      "blockdata_filepath": "data/layouts/TestRoute1/map.bin"
     }
   ]
 }
