@@ -51,7 +51,82 @@
     F(STEEL_WING) \
     F(SKILL_SWAP) \
     F(KNOCK_OFF) \
-    F(OVERHEAT)
+    F(OVERHEAT) \
+    F(PSYSHOCK) \
+    F(FOCUS_BLAST) \
+    F(ENERGY_BALL) \
+    F(FALSE_SWIPE) \
+    F(SCALD) \
+    F(CHARGE_BEAM) \
+    F(ACROBATICS) \
+    F(VENOSHOCK) \
+    F(HYPER_VOICE) \
+    F(AURORA_VEIL) \
+    F(WILL_O_WISP) \
+    F(EMBARGO) \
+    F(FLAME_CHARGE) \
+    F(EXPLOSION) \
+    F(SHADOW_CLAW) \
+    F(PAYBACK) \
+    F(GIGA_IMPACT) \
+    F(STONE_EDGE) \
+    F(AIR_SLASH) \
+    F(GRASS_KNOT) \
+    F(HONE_CLAWS) \
+    F(STEALTH_ROCK) \
+    F(VOLT_SWITCH) \
+    F(THUNDER_WAVE) \
+    F(GYRO_BALL) \
+    F(SWORDS_DANCE) \
+    F(PSYCH_UP) \
+    F(BULLDOZE) \
+    F(FROST_BREATH) \
+    F(ROCK_SLIDE) \
+    F(X_SCISSOR) \
+    F(DRAGON_TAIL) \
+    F(ROOST) \
+    F(POISON_JAB) \
+    F(DREAM_EATER) \
+    F(DRAIN_PUNCH) \
+    F(SWAGGER) \
+    F(SLEEP_TALK) \
+    F(U_TURN) \
+    F(SUBSTITUTE) \
+    F(FLASH_CANNON) \
+    F(DRAGON_PULSE) \
+    F(MAGICAL_LEAF) \
+    F(SMACK_DOWN) \
+    F(SNARL) \
+    F(LEECH_LIFE) \
+    F(TRICK_ROOM) \
+    F(DARK_PULSE) \
+    F(NATURE_POWER) \
+    F(DAZZLING_GLEAM) \
+    F(WILD_CHARGE) \
+    F(AVALANCHE) \
+    F(BRINE) \
+    F(PSYCHO_CUT) \
+    F(EARTH_POWER) \
+    F(AGILITY) \
+    F(SMART_STRIKE) \
+    F(POWER_GEM) \
+    F(BUG_BUZZ) \
+    F(ICICLE_SPEAR) \
+    F(PLAY_ROUGH) \
+    F(AURA_SPHERE) \
+    F(HEX) \
+    F(IRON_HEAD) \
+    F(CROSS_POISON) \
+    F(FLING) \
+    F(MYSTICAL_FIRE) \
+    F(SLUDGE_WAVE) \
+    F(NASTY_PLOT) \
+    F(POWER_UP_PUNCH) \
+    F(SOLAR_BLADE) \
+    F(ELECTRIC_TERRAIN) \
+    F(GRASSY_TERRAIN) \
+    F(PSYCHIC_TERRAIN) \
+    F(MISTY_TERRAIN)
 
 #define FOREACH_HM(F) \
     F(CUT) \
