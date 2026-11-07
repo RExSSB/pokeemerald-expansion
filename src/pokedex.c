@@ -34,6 +34,9 @@
 #include "constants/songs.h"
 #include "config/pokedex_plus_hgss.h"
 
+#define SKIP_THRESHOLD           4 // Number of Pokémon to check are unseen before triggering a skip
+#define SHOW_TRIPLE_BULLET       0xFFFE // Used to indicate sText_TripleBullet should be displayed (0xFFFE is an invalid dex number)
+
 EWRAM_DATA struct PokedexView *sPokedexView = NULL;
 static EWRAM_DATA u16 sLastSelectedPokemon = 0;
 static EWRAM_DATA u8 sPokeBallRotation = 0;
@@ -681,6 +684,7 @@ static const u8 sText_No0000[] = _("{NO}0000");
 static const u8 sText_No000[] = _("{NO}000");
 const u8 sCaughtBall_Gfx[] = INCGFX_U8("graphics/pokedex/caught_ball.png", ".4bpp");
 static const u8 sText_TenDashes[] = _("----------");
+static const u8 sText_TripleBullet[] = _("   ···");
 
 static const u8 sText_UnkHeight[] = _("{CLEAR_TO 12}??'??”");
 static const u8 sText_UnkHeightMetric[] = _("???.? m");
@@ -2083,7 +2087,8 @@ void CreatePokedexList(u8 dexMode, u8 order)
 #define temp_dexCount   vars[0]
 #define temp_isHoennDex vars[1]
 #define temp_dexNum     vars[2]
-    s32 i, r5, r10;
+    s32 i, r10, j;
+    u16 monSeen;
 
     sPokedexView->pokemonListCount = 0;
 
@@ -2111,16 +2116,49 @@ void CreatePokedexList(u8 dexMode, u8 order)
     switch (order)
     {
     case ORDER_NUMERICAL:
+        s16 r5;
         for (i = 0, r5 = 0, r10 = 0; i < temp_dexCount; i++)
         {
             if (temp_isHoennDex)
             {
                 temp_dexNum = RegionalToNationalOrder(i + 1);
+                monSeen = GetSetPokedexFlag(temp_dexNum, FLAG_GET_SEEN);
+                if (!monSeen && i < temp_dexCount - 1 - SKIP_THRESHOLD)
+                {
+                    // Check if the next SKIP_THRESHOLD entries are also unseen
+                    for (j = 1; j <= SKIP_THRESHOLD; j++)
+                    {
+                        if (GetSetPokedexFlag(HoennToNationalOrder(i + j), FLAG_GET_SEEN))
+                            break;
+                    }
+                    if (j == SKIP_THRESHOLD + 1)
+                    {
+                        // Loop until the next seen entry
+                        do
+                        {
+                            i++;
+                            monSeen = GetSetPokedexFlag(HoennToNationalOrder(i + 1), FLAG_GET_SEEN);
+                        } while (!monSeen && i < temp_dexCount - 1);
+
+                        temp_dexNum = HoennToNationalOrder(i + 1);
+                        sPokedexView->pokedexList[r5].dexNum = 0;
+                        sPokedexView->pokedexList[r5].seen = FALSE;
+                        sPokedexView->pokedexList[r5].owned = FALSE;
+                        r5++;
+                    }
+                }
+                sPokedexView->pokedexList[r5].dexNum = temp_dexNum;
+                sPokedexView->pokedexList[r5].seen = GetSetPokedexFlag(temp_dexNum, FLAG_GET_SEEN);
+                sPokedexView->pokedexList[r5].owned = GetSetPokedexFlag(temp_dexNum, FLAG_GET_CAUGHT);
+                if (sPokedexView->pokedexList[r5].seen)
+                    sPokedexView->pokemonListCount = r5 + 1;
+                r5++;
             }
             else
             {
                 temp_dexNum = i + 1;
-                if (GetSetPokedexFlag(temp_dexNum, FLAG_GET_SEEN))
+                monSeen = GetSetPokedexFlag(temp_dexNum, FLAG_GET_SEEN);
+                if (monSeen)
                     r10 = 1;
             }
 
@@ -2129,6 +2167,28 @@ void CreatePokedexList(u8 dexMode, u8 order)
 
             if (r10 || temp_isHoennDex)
             {
+                if (!monSeen && i < temp_dexCount - 1 - SKIP_THRESHOLD)
+                {
+                    // Check if the next SKIP_THRESHOLD entries are also unseen
+                    for (j = 1; j <= SKIP_THRESHOLD; j++)
+                    {
+                        if (GetSetPokedexFlag(i + j + 1, FLAG_GET_SEEN))
+                            break;
+                    }
+                    if (j == SKIP_THRESHOLD + 1)
+                    {
+                        // Loop until the next seen entry
+                        while (i < temp_dexCount - 1 && !GetSetPokedexFlag(i + 1, FLAG_GET_SEEN))
+                        {
+                            i++;
+                        }
+                        temp_dexNum = i + 1;
+                        sPokedexView->pokedexList[r5].dexNum = 0;
+                        sPokedexView->pokedexList[r5].seen = FALSE;
+                        sPokedexView->pokedexList[r5].owned = FALSE;
+                        r5++;
+                    }
+                }
                 sPokedexView->pokedexList[r5].dexNum = temp_dexNum;
                 sPokedexView->pokedexList[r5].seen = GetSetPokedexFlag(temp_dexNum, FLAG_GET_SEEN);
                 sPokedexView->pokedexList[r5].owned = GetSetPokedexFlag(temp_dexNum, FLAG_GET_CAUGHT);
@@ -2330,7 +2390,7 @@ static void CreateMonListEntry(u8 position, u16 b, u16 ignored)
     CopyWindowToVram(0, COPYWIN_GFX);
 }
 
-void CreateMonDexNum(u16 entryNum, u8 left, u8 top, u16 unused)
+void CreateMonDexNum(u16 entryNum, u8 left, u8 top, u16 skip)
 {
     u8 text[7];
     u16 dexNum, offset = 2;
@@ -2341,15 +2401,22 @@ void CreateMonDexNum(u16 entryNum, u8 left, u8 top, u16 unused)
     if (sPokedexView->dexMode == DEX_MODE_HOENN)
         dexNum = NationalToRegionalOrder(dexNum);
     memcpy(text, sText_No0000, ARRAY_COUNT(sText_No0000));
-    if (NATIONAL_DEX_COUNT > 999 && sPokedexView->dexMode != DEX_MODE_HOENN)
+    if (skip)
     {
-        text[offset] = CHAR_0 + dexNum / 1000;
-        offset++;
+        text[offset++] = EOS;
     }
-    text[offset++] = CHAR_0 + (dexNum % 1000) / 100;
-    text[offset++] = CHAR_0 + ((dexNum % 1000) % 100) / 10;
-    text[offset++] = CHAR_0 + ((dexNum % 1000) % 100) % 10;
-    text[offset++] = EOS;
+    else
+    {
+        if (NATIONAL_DEX_COUNT > 999 && sPokedexView->dexMode != DEX_MODE_HOENN)
+        {
+            text[offset] = CHAR_0 + dexNum / 1000;
+            offset++;
+        }
+        text[offset++] = CHAR_0 + (dexNum % 1000) / 100;
+        text[offset++] = CHAR_0 + ((dexNum % 1000) % 100) / 10;
+        text[offset++] = CHAR_0 + ((dexNum % 1000) % 100) % 10;
+        text[offset++] = EOS;
+    }
 
     if (P_SKIP_POKEDEX_GAPS == SKIP_GAPS_EXCEPT_ONE && !sPokedexView->pokedexList[entryNum].seen)
     {
@@ -2376,11 +2443,18 @@ u8 CreateMonName(u16 num, u8 left, u8 top)
 {
     const u8 *str;
 
-    num = NationalPokedexNumToSpeciesForm(num);
-    if (num)
-        str = GetSpeciesName(num);
+    if (num == SHOW_TRIPLE_BULLET)
+    {
+        str = sText_TripleBullet;
+    }
     else
-        str = sText_TenDashes;
+    {
+        num = NationalPokedexNumToSpecies(num);
+        if (num)
+            str = GetSpeciesName(num);
+        else
+            str = sText_TenDashes;
+    }
     PrintMonName(0, FONT_NARROW, str, left, top);
     return StringLength(str);
 }

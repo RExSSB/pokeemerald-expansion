@@ -56,6 +56,7 @@
 // static .rodata strings
 
 static const u8 sText_TenDashes[] = _("----------");
+static const u8 sText_TripleBullet[] = _("   ···");
 ALIGNED(4) static const u8 sExpandedPlaceholder_PokedexDescription[] = _("");
 
 static const u8 sText_Stats_Buttons[] = _("{A_BUTTON}TOGGLE   {DPAD_UPDOWN}MOVES");
@@ -192,6 +193,9 @@ static const u32 sPokedexPlusHGSS_ScreenSearchHoenn_Tilemap[] = INCGFX_U32("grap
 static const u32 sPokedexPlusHGSS_ScreenSearchNational_Tilemap[] = INCGFX_U32("graphics/pokedex/hgss/tilemap_search_screen_national.bin", ".smolTM");
 
 #define MAX_EVOLUTION_ICONS 8
+
+#define SKIP_THRESHOLD           4 // Number of Pokémon to check are unseen before triggering a skip
+#define SHOW_TRIPLE_BULLET       0xFFFE // Used to indicate sText_TripleBullet should be displayed (0xFFFE is an invalid dex number)
 
 // for evolution method listings
 #define MAX_EVO_METHOD_LINES 10
@@ -755,15 +759,15 @@ bool32 TryCreateMonListEntry_HGSS(u8 position, u16 b, u16 ignored)
                 ClearMonListEntry(MON_LIST_X, i * 2, ignored);
                 if (sPokedexView->pokedexList[entryNum].seen)
                 {
-                    CreateMonDexNum(entryNum, MON_LIST_X+1, i * 2, ignored);
+                    CreateMonDexNum(entryNum, MON_LIST_X+1, i * 2, FALSE);
                     CreateCaughtBall(sPokedexView->pokedexList[entryNum].owned, MON_LIST_X, i * 2, ignored);
                     CreateMonName(sPokedexView->pokedexList[entryNum].dexNum, MON_LIST_X + 5, i * 2);
                 }
                 else
                 {
-                    CreateMonDexNum(entryNum, MON_LIST_X+1, i * 2, ignored);
+                    CreateMonDexNum(entryNum, MON_LIST_X+1, i * 2, sPokedexView->pokedexList[entryNum].dexNum == 0);
                     CreateCaughtBall(FALSE, MON_LIST_X, i * 2, ignored);
-                    CreateMonName(0, MON_LIST_X + 5, i * 2);
+                    CreateMonName(sPokedexView->pokedexList[entryNum].dexNum == 0 ? SHOW_TRIPLE_BULLET : 0, MON_LIST_X + 5, i * 2);
                 }
             }
             entryNum++;
@@ -780,15 +784,15 @@ bool32 TryCreateMonListEntry_HGSS(u8 position, u16 b, u16 ignored)
             ClearMonListEntry(MON_LIST_X, sPokedexView->listVOffset * 2, ignored);
             if (sPokedexView->pokedexList[entryNum].seen)
             {
-                CreateMonDexNum(entryNum, MON_LIST_X+1, sPokedexView->listVOffset * 2, ignored);
+                CreateMonDexNum(entryNum, MON_LIST_X+1, sPokedexView->listVOffset * 2, FALSE);
                 CreateCaughtBall(sPokedexView->pokedexList[entryNum].owned, MON_LIST_X, sPokedexView->listVOffset * 2, ignored);
                 CreateMonName(sPokedexView->pokedexList[entryNum].dexNum, MON_LIST_X + 5, sPokedexView->listVOffset * 2);
             }
             else
             {
-                CreateMonDexNum(entryNum, MON_LIST_X+1, sPokedexView->listVOffset * 2, ignored);
+                CreateMonDexNum(entryNum, MON_LIST_X+1, sPokedexView->listVOffset * 2, sPokedexView->pokedexList[entryNum].dexNum == 0);
                 CreateCaughtBall(FALSE, MON_LIST_X, sPokedexView->listVOffset * 2, ignored);
-                CreateMonName(0, MON_LIST_X + 5, sPokedexView->listVOffset * 2);
+                CreateMonName(sPokedexView->pokedexList[entryNum].dexNum == 0 ? SHOW_TRIPLE_BULLET : 0, MON_LIST_X + 5, sPokedexView->listVOffset * 2);
             }
         }
         break;
@@ -804,15 +808,15 @@ bool32 TryCreateMonListEntry_HGSS(u8 position, u16 b, u16 ignored)
             ClearMonListEntry(MON_LIST_X, vOffset * 2, ignored);
             if (sPokedexView->pokedexList[entryNum].seen)
             {
-                CreateMonDexNum(entryNum, MON_LIST_X+1, vOffset * 2, ignored);
+                CreateMonDexNum(entryNum, MON_LIST_X+1, vOffset * 2, FALSE);
                 CreateCaughtBall(sPokedexView->pokedexList[entryNum].owned, MON_LIST_X, vOffset * 2, ignored);
                 CreateMonName(sPokedexView->pokedexList[entryNum].dexNum, MON_LIST_X + 5, vOffset * 2);
             }
             else
             {
-                CreateMonDexNum(entryNum, MON_LIST_X+1, vOffset * 2, ignored);
+                CreateMonDexNum(entryNum, MON_LIST_X+1, vOffset * 2, sPokedexView->pokedexList[entryNum].dexNum == 0);
                 CreateCaughtBall(FALSE, MON_LIST_X, vOffset * 2, ignored);
-                CreateMonName(0, MON_LIST_X + 5, vOffset * 2);
+                CreateMonName(sPokedexView->pokedexList[entryNum].dexNum == 0 ? SHOW_TRIPLE_BULLET : 0, MON_LIST_X + 5, vOffset * 2);
             }
         }
         break;
