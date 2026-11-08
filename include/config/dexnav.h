@@ -13,8 +13,8 @@
 
 // Search parameters
 #define DEXNAV_TIMEOUT                  300  // 15 seconds is the default time out. Max of 1092 seconds allowed
-#define SNEAKING_PROXIMITY              3   // Tile amount
-#define CREEPING_PROXIMITY              1
+#define SNEAKING_PROXIMITY              2   // Tile amount
+#define CREEPING_PROXIMITY              0
 #define MAX_PROXIMITY                   20
 
 #define DEXNAV_CHAIN_MAX                100 // maximum chain value
