@@ -1017,8 +1017,16 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 
 `
 
-script LittlerootTown_EventScript_Poryscript{
+script LittlerootTown_EventScript_GiveDexNav{
     lockall
-    msgbox("Poryscript is installed.")
+    msgbox("I have a gift for you.", MSGBOX_NPC)
+	setflag(FLAG_RECEIVED_DEXNAV)
+	playfanfare(MUS_OBTAIN_ITEM)
+	msgbox("{PLAYER} received the DexNav!")
+	waitfanfare
+	msgbox("Hope you'll enjoy!", MSGBOX_NPC)
+	waitmessage
+	applymovement(9, moves(face_down))
+	waitmovement
     releaseall
 }

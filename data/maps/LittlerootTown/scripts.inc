@@ -2031,16 +2031,46 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 # 1016 "data/maps/LittlerootTown/scripts.pory"
 	.string "Let's go to my LAB.$"
 
-LittlerootTown_EventScript_Poryscript::
+LittlerootTown_EventScript_GiveDexNav::
 # 1021 "data/maps/LittlerootTown/scripts.pory"
 	lockall
 # 1022 "data/maps/LittlerootTown/scripts.pory"
-	msgbox LittlerootTown_EventScript_Poryscript_Text_0
+	msgbox LittlerootTown_EventScript_GiveDexNav_Text_0, MSGBOX_NPC
 # 1023 "data/maps/LittlerootTown/scripts.pory"
+	setflag FLAG_RECEIVED_DEXNAV
+# 1024 "data/maps/LittlerootTown/scripts.pory"
+	playfanfare MUS_OBTAIN_ITEM
+# 1025 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_GiveDexNav_Text_1
+# 1026 "data/maps/LittlerootTown/scripts.pory"
+	waitfanfare
+# 1027 "data/maps/LittlerootTown/scripts.pory"
+	msgbox LittlerootTown_EventScript_GiveDexNav_Text_2, MSGBOX_NPC
+# 1028 "data/maps/LittlerootTown/scripts.pory"
+	waitmessage
+# 1029 "data/maps/LittlerootTown/scripts.pory"
+	applymovement 9, LittlerootTown_EventScript_GiveDexNav_Movement_0
+# 1030 "data/maps/LittlerootTown/scripts.pory"
+	waitmovement
+# 1031 "data/maps/LittlerootTown/scripts.pory"
 	releaseall
 	return
 
 
-LittlerootTown_EventScript_Poryscript_Text_0:
+# 1029 "data/maps/LittlerootTown/scripts.pory"
+LittlerootTown_EventScript_GiveDexNav_Movement_0:
+# 1029 "data/maps/LittlerootTown/scripts.pory"
+	face_down
+	step_end
+
+LittlerootTown_EventScript_GiveDexNav_Text_0:
 # 1022 "data/maps/LittlerootTown/scripts.pory"
-	.string "Poryscript is installed.$"
+	.string "I have a gift for you.$"
+
+LittlerootTown_EventScript_GiveDexNav_Text_1:
+# 1025 "data/maps/LittlerootTown/scripts.pory"
+	.string "{PLAYER} received the DexNav!$"
+
+LittlerootTown_EventScript_GiveDexNav_Text_2:
+# 1027 "data/maps/LittlerootTown/scripts.pory"
+	.string "Hope you'll enjoy!$"

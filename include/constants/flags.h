@@ -106,7 +106,7 @@
 #define FLAG_RESCUED_BIRCH                       0x52
 #define FLAG_LEGENDARIES_IN_SOOTOPOLIS           0x53
 
-#define FLAG_UNUSED_0x054                    0x54  // Unused Flag
+#define FLAG_NO_TRAINER_SIGHT                   0x54  // UF, Used for No Trainer Sight
 #define FLAG_UNUSED_0x055                    0x55  // Unused Flag
 
 #define FLAG_HIDE_CONTEST_POKE_BALL          0x56  // Always set after new game, object it hides is added directly
@@ -1224,9 +1224,9 @@
 
 #define FLAG_EXP_SHARE_ENABLED                                           0x493 // UF, Used for Exp Share
 #define FLAG_VS_SEEKER_ENABLED                                           0x494 // UF, Used for VS. Seeker
-#define FLAG_UNUSED_0x495                                           0x495 // Unused Flag
-#define FLAG_UNUSED_0x496                                           0x496 // Unused Flag
-#define FLAG_UNUSED_0x497                                           0x497 // Unused Flag
+#define FLAG_RECEIVED_DEXNAV                                          0x495 // UF, Used for DexNav
+#define FLAG_DEXNAV_SEARCHING                                          0x496 // UF, Used for DexNav
+#define FLAG_DEXNAV_DETECTOR_MODE                                           0x497 // UF, Used for DexNav
 #define FLAG_UNUSED_0x498                                           0x498 // Unused Flag
 #define FLAG_UNUSED_0x499                                           0x499 // UF, used temporarily for TM Psyshock
 #define FLAG_UNUSED_0x49A                                           0x49A // Unused Flag
