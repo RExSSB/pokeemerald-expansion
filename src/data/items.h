@@ -16598,6 +16598,25 @@ const struct ItemInfo gItemsInfo[] =
         .iconPic = gItemIcon_PokeshiDoll,
         .iconPalette = gItemIconPalette_PokeshiDoll,
     },
+
+// Emergence's Original Items
+// New Evolution Items
+
+    [ITEM_ANCIENT_CHARM] =
+    {
+        .name = ITEM_NAME("Ancient Charm"),
+        .price = 15000,
+        .description = COMPOUND_STRING(
+            "A curious charm\n"
+            "that makes some\n"
+            "Pokémon evolve."),
+        .pocket = POCKET_KEY_ITEMS,
+        .type = ITEM_USE_PARTY_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_EvolutionStone,
+        .effect = gItemEffect_EvoItem,
+        .iconPic = gItemIcon_AncientCharm,
+        .iconPalette = gItemIconPalette_AncientCharm,
+    },
 };
 
 #undef ITEM_NAME

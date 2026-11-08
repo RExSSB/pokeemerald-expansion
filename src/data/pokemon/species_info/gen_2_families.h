@@ -426,9 +426,9 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         )
         .levelUpLearnset = sQuilavaLevelUpLearnset,
         .teachableLearnset = sQuilavaTeachableLearnset,
-        .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_TYPHLOSION, CONDITIONS({IF_NOT_REGION, REGION_HISUI})}
+        .evolutions = EVOLUTION({EVO_LEVEL, 36, SPECIES_TYPHLOSION}
                             #if P_HISUIAN_FORMS
-                                ,{EVO_LEVEL, 36, SPECIES_TYPHLOSION_HISUI, CONDITIONS({IF_REGION, REGION_HISUI})}
+                                ,{EVO_ITEM, ITEM_ANCIENT_CHARM, SPECIES_TYPHLOSION_HISUI}
                             #endif
                             ),
     },
@@ -7775,7 +7775,7 @@ const struct SpeciesInfo gSpeciesInfoGen2[] =
         .teachableLearnset = sStantlerTeachableLearnset,
         .eggMoveLearnset = sStantlerEggMoveLearnset,
     #if P_GEN_8_CROSS_EVOS
-        .evolutions = EVOLUTION({EVO_LEVEL, 0, SPECIES_WYRDEER, CONDITIONS({IF_USED_MOVE_X_TIMES, MOVE_PSYSHIELD_BASH, 20})}),
+        .evolutions = EVOLUTION({EVO_ITEM, ITEM_ANCIENT_CHARM, SPECIES_WYRDEER}),
     #endif
     },
 

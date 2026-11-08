@@ -1772,6 +1772,11 @@ extern const u16 gItemIconPalette_SwapSnack[];
 extern const u32 gItemIcon_TwiceSpicedRadish[];
 extern const u16 gItemIconPalette_TwiceSpicedRadish[];
 
+// Emergence's Orignial Items
+// New Evolution Items
+extern const u32 gItemIcon_AncientCharm[];
+extern const u16 gItemIconPalette_AncientCharm[];
+
 extern const u32 gItemIcon_ReturnToFieldArrow[];
 extern const u16 gItemIconPalette_ReturnToFieldArrow[];
 
