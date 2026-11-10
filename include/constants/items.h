@@ -1081,6 +1081,7 @@ enum __attribute__((packed)) Item
 
     // New Evolution Items
     ITEM_ANCIENT_CHARM = 899,
+    ITEM_TOP_HAT = 900,
 
     ITEMS_COUNT,
     ITEM_FIELD_ARROW = ITEMS_COUNT,

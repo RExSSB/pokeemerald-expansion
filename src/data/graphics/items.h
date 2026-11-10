@@ -2114,6 +2114,10 @@ const u32 gItemIcon_TwiceSpicedRadish[] = INCGFX_U32("graphics/items/icons/twice
 const u16 gItemIconPalette_TwiceSpicedRadish[] = INCGFX_U16("graphics/items/icon_palettes/twice_spiced_radish.pal", ".gbapal");
 
 // Emergence's Orignial Items
+
 // New Evolution Items
 const u32 gItemIcon_AncientCharm[] = INCGFX_U32("graphics/items/icons/ancient_charm.png", ".4bpp.smol");
 const u16 gItemIconPalette_AncientCharm[] = INCGFX_U16("graphics/items/icon_palettes/ancient_charm.pal", ".gbapal");
+
+const u32 gItemIcon_TopHat[] = INCGFX_U32("graphics/items/icons/top_hat.png", ".4bpp.smol");
+const u16 gItemIconPalette_TopHat[] = INCGFX_U16("graphics/items/icon_palettes/top_hat.pal", ".gbapal");
