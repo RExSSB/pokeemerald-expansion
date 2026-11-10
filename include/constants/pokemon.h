@@ -191,7 +191,7 @@ enum OtIdMethod
 
 // Constants for AdjustFriendship
 #define FRIENDSHIP_EVENT_GROW_LEVEL       0
-#define FRIENDSHIP_EVENT_VITAMIN          1 // unused, handled by PokemonUseItemEffects
+#define FRIENDSHIP_EVENT_VITAMIN          1 // Originally unused, now used by the IV candies (previously handled by PokemonUseItemEffects)
 #define FRIENDSHIP_EVENT_BATTLE_ITEM      2 // unused, handled by PokemonUseItemEffects
 #define FRIENDSHIP_EVENT_LEAGUE_BATTLE    3
 #define FRIENDSHIP_EVENT_LEARN_TMHM       4
@@ -200,6 +200,7 @@ enum OtIdMethod
 #define FRIENDSHIP_EVENT_FAINT_FIELD_PSN  7
 #define FRIENDSHIP_EVENT_FAINT_LARGE      8 // If opponent was >= 30 levels higher. See AdjustFriendshipOnBattleFaint
 #define FRIENDSHIP_EVENT_MASSAGE          9
+#define FRIENDSHIP_EVENT_EFFORT_BERRIES   10 // New Constant for Emergence, used by the IV candies
 
 // Constants for GetLeadMonFriendshipScore
 #define FRIENDSHIP_NONE        0

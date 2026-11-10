@@ -140,6 +140,8 @@ void MoveDeleterForgetMove(void);
 void BufferMoveDeleterNicknameAndMove(void);
 void GetNumMovesSelectedMonHas(void);
 void MoveDeleterChooseMoveToForget(void);
+void ItemUseCB_ReduceIV(u8 taskId, TaskFunc task);
+void ItemUseCB_IncreaseIV(u8 taskId, TaskFunc task);
 
 bool32 SetUpFieldMove_Surf(void);
 bool32 SetUpFieldMove_Fly(void);

@@ -2121,3 +2121,28 @@ const u16 gItemIconPalette_AncientCharm[] = INCGFX_U16("graphics/items/icon_pale
 
 const u32 gItemIcon_TopHat[] = INCGFX_U32("graphics/items/icons/top_hat.png", ".4bpp.smol");
 const u16 gItemIconPalette_TopHat[] = INCGFX_U16("graphics/items/icon_palettes/top_hat.pal", ".gbapal");
+
+// IV Modifiers
+const u32 gItemIcon_HealthCandy[] = INCGFX_U32("graphics/items/icons/health_candy.png", ".4bpp.smol");
+const u16 gItemIconPalette_HealthCandy[] = INCGFX_U16("graphics/items/icon_palettes/health_candy.pal", ".gbapal");
+
+const u32 gItemIcon_MightyCandy[] = INCGFX_U32("graphics/items/icons/mighty_candy.png", ".4bpp.smol");
+const u16 gItemIconPalette_MightyCandy[] = INCGFX_U16("graphics/items/icon_palettes/mighty_candy.pal", ".gbapal");
+
+const u32 gItemIcon_ToughCandy[] = INCGFX_U32("graphics/items/icons/tough_candy.png", ".4bpp.smol");
+const u16 gItemIconPalette_ToughCandy[] = INCGFX_U16("graphics/items/icon_palettes/tough_candy.pal", ".gbapal");
+
+const u32 gItemIcon_SmartCandy[] = INCGFX_U32("graphics/items/icons/smart_candy.png", ".4bpp.smol");
+const u16 gItemIconPalette_SmartCandy[] = INCGFX_U16("graphics/items/icon_palettes/smart_candy.pal", ".gbapal");
+
+const u32 gItemIcon_CourageCandy[] = INCGFX_U32("graphics/items/icons/courage_candy.png", ".4bpp.smol");
+const u16 gItemIconPalette_CourageCandy[] = INCGFX_U16("graphics/items/icon_palettes/courage_candy.pal", ".gbapal");
+
+const u32 gItemIcon_QuickCandy[] = INCGFX_U32("graphics/items/icons/quick_candy.png", ".4bpp.smol");
+const u16 gItemIconPalette_QuickCandy[] = INCGFX_U16("graphics/items/icon_palettes/quick_candy.pal", ".gbapal");
+
+const u32 gItemIcon_SluggishCandy[] = INCGFX_U32("graphics/items/icons/sluggish_candy.png", ".4bpp.smol");
+const u16 gItemIconPalette_SluggishCandy[] = INCGFX_U16("graphics/items/icon_palettes/sluggish_candy.pal", ".gbapal");
+
+const u32 gItemIcon_PunyCandy[] = INCGFX_U32("graphics/items/icons/puny_candy.png", ".4bpp.smol");
+const u16 gItemIconPalette_PunyCandy[] = INCGFX_U16("graphics/items/icon_palettes/puny_candy.pal", ".gbapal");
