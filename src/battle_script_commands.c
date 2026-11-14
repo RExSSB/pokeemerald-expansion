@@ -11,6 +11,9 @@
 #include "battle_environment.h"
 #include "battle_gimmick.h"
 #include "battle_z_move.h"
+#include "bw_summary_screen.h"
+#include "constants/moves.h"
+#include "constants/abilities.h"
 #include "battle_stat_change.h"
 #include "battle_move_resolution.h"
 #include "item.h"
@@ -3875,7 +3878,14 @@ static void Cmd_yesnoboxlearnmove(void)
         if (!gPaletteFade.active)
         {
             CloseMainBattleScreen();
-            ShowSelectMovePokemonSummaryScreen(gParties[B_TRAINER_PLAYER], gBattleStruct->expGetterMonId, ReshowBattleScreenAfterMenu, gMoveToLearn);
+            if (BW_SUMMARY_SCREEN)
+            {
+                ShowSelectMovePokemonSummaryScreen_BW(gParties[B_TRAINER_PLAYER], gBattleStruct->expGetterMonId, ReshowBattleScreenAfterMenu, gMoveToLearn);
+            }
+            else
+            {
+                ShowSelectMovePokemonSummaryScreen(gParties[B_TRAINER_PLAYER], gBattleStruct->expGetterMonId, ReshowBattleScreenAfterMenu, gMoveToLearn);
+            }
             gBattleScripting.learnMoveState++;
         }
         break;
