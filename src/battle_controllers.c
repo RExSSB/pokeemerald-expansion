@@ -35,6 +35,7 @@
 #include "constants/songs.h"
 #include "test/battle.h"
 #include "test/test.h"
+#include "overworld.h"
 
 static EWRAM_DATA u8 sLinkSendTaskId = 0;
 static EWRAM_DATA u8 sLinkReceiveTaskId = 0;
@@ -2002,7 +2003,9 @@ static void SetBattlerMonData(enum BattlerId battler, struct Pokemon *party, u32
 static bool8 ShouldDoSlideInAnim(enum BattlerId battler)
 {
     struct ObjectEvent *followerObj = GetFollowerObject();
-    if (!followerObj || followerObj->invisible)
+    if (!followerObj
+     || followerObj->invisible
+     || (gSaveBlock3Ptr->followerIndex > 0 && gSaveBlock3Ptr->followerIndex < PARTY_SIZE && gParties[B_TRAINER_PLAYER][gSaveBlock3Ptr->followerIndex].hp > 0))
         return FALSE;
 
     if (gBattleTypeFlags & (
