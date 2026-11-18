@@ -7855,7 +7855,7 @@ static inline s32 DoFutureSightAttackDamageCalc(struct DamageContext *ctx)
     bool32 swordOfRuin = gBattleMons[ctx->battlerAtk].volatiles.swordOfRuin;
     bool32 beadsOfRuin = gBattleMons[ctx->battlerAtk].volatiles.beadsOfRuin;
 
-    PokemonToBattleMon(partyMon , &gBattleMons[ctx->battlerAtk]);
+    PokemonToBattleMon(partyMon , &gBattleMons[ctx->battlerAtk], TRUE);
 
     gBattleMons[ctx->battlerAtk].volatiles.vesselOfRuin = vesselOrRuin;
     gBattleMons[ctx->battlerAtk].volatiles.tabletsOfRuin = tabletsOfRuin;
