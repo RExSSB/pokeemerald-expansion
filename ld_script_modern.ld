@@ -1,6 +1,6 @@
 ENTRY(Start)
 
-gNumMusicPlayers = 5;
+gNumMusicPlayers = 6;
 gMaxLines = 0;
 gInitialMainCB2 = CB2_InitCopyrightScreenAfterBootup;
 

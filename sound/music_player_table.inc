@@ -4,6 +4,7 @@
 	.equiv NUM_TRACKS_SE2, 9
 	.equiv NUM_TRACKS_SE3, 1
 	.equiv NUM_TRACKS_EVOLUTION, 10
+	.equiv NUM_TRACKS_BATTLE, 10
 
 	.bss
 	.align 2
@@ -28,6 +29,10 @@ gMPlayTrack_Evolution::
 	.space TRACK_SIZE * NUM_TRACKS_EVOLUTION
 	.size gMPlayTrack_Evolution, .-gMPlayTrack_Evolution
 
+gMPlayTrack_Battle::
+	.space TRACK_SIZE * NUM_TRACKS_BATTLE
+	.size gMPlayTrack_Battle, .-gMPlayTrack_Battle
+
 	.section .rodata
 
 	.align 2
@@ -37,3 +42,4 @@ gMPlayTable::
 	music_player gMPlayInfo_SE2, gMPlayTrack_SE2, NUM_TRACKS_SE2, 1
 	music_player gMPlayInfo_SE3, gMPlayTrack_SE3, NUM_TRACKS_SE3, 0
 	music_player gMPlayInfo_Evolution, gMPlayTrack_Evolution, NUM_TRACKS_EVOLUTION, 0
+	music_player gMPlayInfo_Battle, gMPlayTrack_Battle, NUM_TRACKS_BATTLE, 0
