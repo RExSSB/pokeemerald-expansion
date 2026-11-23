@@ -716,7 +716,7 @@ static void Task_EvolutionScene(u8 taskId)
         if (!IsSEPlaying())
         {
             // Start music, fade background to black
-            PlayNewMapMusic(MUS_EVOLUTION);
+            m4aSongNumStart(MUS_EVOLUTION);
             gTasks[taskId].tState++;
             BeginNormalPaletteFade(0x1C, 4, 0, 0x10, RGB_BLACK);
         }
@@ -793,7 +793,7 @@ static void Task_EvolutionScene(u8 taskId)
             u32 zero = 0;
             StringExpandPlaceholders(gStringVar4, gText_CongratsPkmnEvolved);
             BattlePutTextOnWindow(gStringVar4, B_WIN_MSG);
-            PlayBGM(MUS_EVOLVED);
+            m4aSongNumStart(MUS_EVOLVED);
             gTasks[taskId].tState++;
             SetMonData(mon, MON_DATA_SPECIES, (void *)(&gTasks[taskId].tPostEvoSpecies));
             SetMonData(mon, MON_DATA_EVOLUTION_TRACKER, &zero);
@@ -824,8 +824,12 @@ static void Task_EvolutionScene(u8 taskId)
                 u8 nickname[POKEMON_NAME_BUFFER_SIZE];
                 if (!(gTasks[taskId].tBits & TASK_BIT_LEARN_MOVE))
                 {
-                    StopMapMusic();
-                    if (gMain.inBattle && gBattleOutcome == 0) PlayBattleBGM(); // If battle is still ongoing, replay battle music
+                    m4aMPlayStop(&gMPlayInfo_BGM);
+                    if (gMain.inBattle && gBattleOutcome == 0) // If battle is still ongoing, replay battle music
+                    {
+                        m4aMPlayContinue(&gMPlayInfo_BGM);
+                        m4aMPlayFadeIn(&gMPlayInfo_BGM, 4);
+                    }
                     else Overworld_PlaySpecialMapMusic();
                 }
 
@@ -867,8 +871,12 @@ static void Task_EvolutionScene(u8 taskId)
         {
             if (!(gTasks[taskId].tBits & TASK_BIT_LEARN_MOVE))
             {
-                StopMapMusic();
-                if (gMain.inBattle && gBattleOutcome == 0) PlayBattleBGM(); // If battle is still ongoing, replay battle music
+                m4aMPlayStop(&gMPlayInfo_Evolution);
+                if (gMain.inBattle && gBattleOutcome == 0) // If battle is still ongoing, replay battle music
+                {
+                    m4aMPlayContinue(&gMPlayInfo_BGM);
+                    m4aMPlayFadeIn(&gMPlayInfo_BGM, 4);
+                }
                 else Overworld_PlaySpecialMapMusic();
 
             }
@@ -1187,7 +1195,7 @@ static void Task_TradeEvolutionScene(u8 taskId)
     case T_EVOSTATE_START_MUSIC:
         if (!IsSEPlaying())
         {
-            PlayBGM(MUS_EVOLUTION);
+            m4aSongNumStart(MUS_EVOLUTION);
             gTasks[taskId].tState++;
             BeginNormalPaletteFade(0x1C, 4, 0, 0x10, RGB_BLACK);
         }
@@ -1292,7 +1300,7 @@ static void Task_TradeEvolutionScene(u8 taskId)
             }
             else
             {
-                PlayBGM(MUS_EVOLUTION);
+                m4aSongNumStart(MUS_EVOLUTION);
                 DrawTextOnTradeWindow(0, gText_CommunicationStandby5, 1);
                 gTasks[taskId].tState++;
             }

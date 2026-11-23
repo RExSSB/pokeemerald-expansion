@@ -2,6 +2,7 @@
 	.equiv MUSIC_PLAYER_SE1,1
 	.equiv MUSIC_PLAYER_SE2,2
 	.equiv MUSIC_PLAYER_SE3,3
+	.equiv MUSIC_PLAYER_EVOLUTION,4
 
 	.align 2
 
@@ -383,7 +384,7 @@ gSongTable::
 	song mus_route122, MUSIC_PLAYER_BGM, 0
 	song mus_oceanic_museum, MUSIC_PLAYER_BGM, 0
 	song mus_evolution_intro, MUSIC_PLAYER_SE2, 2
-	song mus_evolution, MUSIC_PLAYER_BGM, 0
+	song mus_evolution, MUSIC_PLAYER_EVOLUTION, 4
 	song mus_move_deleted, MUSIC_PLAYER_SE2, 2
 	song mus_encounter_girl, MUSIC_PLAYER_BGM, 0
 	song mus_encounter_male, MUSIC_PLAYER_BGM, 0
